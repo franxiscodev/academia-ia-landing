@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>ialogía - Academia de Habilidades Digitales con IA | Aprender a Aprender</title>
+  <meta name="title" content="ialogía - Academia de Habilidades Digitales con IA | Aprender a Aprender">
+  <meta name="description" content="Transformamos a jóvenes de 10 a 16 años en creadores activos de conocimiento, dominando la IA como herramienta fundamental de estudio, investigación y creación personal.">
+  <meta name="keywords" content="ialogía, IA, educación, inteligencia artificial, habilidades digitales, aprendizaje, academia, jóvenes, metacognición">
+  <meta name="author" content="ialogía - Academia de Habilidades Digitales con IA">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://academia-ia.com/">
+  <meta property="og:title" content="ialogía - Academia de Habilidades Digitales con IA">
+  <meta property="og:description" content="Transformamos a jóvenes de 10 a 16 años en creadores activos de conocimiento con IA">
+  <meta property="og:image" content="/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://academia-ia.com/">
+  <meta property="twitter:title" content="ialogía - Academia de Habilidades Digitales con IA">
+  <meta property="twitter:description" content="Transformamos a jóvenes de 10 a 16 años en creadores activos de conocimiento con IA">
+  <meta property="twitter:image" content="/assets/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Paleta principal basada en la infografía
+            'mint': {
+              50: '#f0fdf9',
+              100: '#ccfbef',
+              200: '#99f6e0',
+              300: '#5fe9ce',
+              400: '#7DD3C0', // Color principal de la infografía
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            'coral': {
+              50: '#fff5f3',
+              100: '#ffe9e5',
+              200: '#ffd6cf',
+              300: '#ffb8ac',
+              400: '#FF8B7B', // Acento coral de la infografía
+              500: '#f97066',
+              600: '#e5503f',
+              700: '#c13f2f',
+              800: '#a0362a',
+              900: '#843228',
+            },
+            'sky-soft': {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#A8D8EA', // Azul cielo suave
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            'sunshine': {
+              50: '#fffef7',
+              100: '#fffbeb',
+              200: '#fef3c7',
+              300: '#FFD97D', // Amarillo pastel
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            'cream': '#FAFBF8',
+            'slate-dark': '#2C3E50',
+          },
+          fontFamily: {
+            'display': ['Poppins', 'sans-serif'],
+            'body': ['Inter', 'system-ui', 'sans-serif'],
+          },
+          fontSize: {
+            'hero': ['3.5rem', { lineHeight: '1.1', fontWeight: '700' }],
+            'hero-mobile': ['2.5rem', { lineHeight: '1.2', fontWeight: '700' }],
+          },
+          borderRadius: {
+            'card': '1.5rem',
+            'button': '0.75rem',
+          },
+          boxShadow: {
+            'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+            'card': '0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            'lift': '0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 8px 12px -4px rgba(0, 0, 0, 0.08)',
+            'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+          },
+          backgroundImage: {
+            'gradient-mint-coral': 'linear-gradient(135deg, #7DD3C0 0%, #FF8B7B 100%)',
+            'gradient-sky-mint': 'linear-gradient(135deg, #A8D8EA 0%, #7DD3C0 100%)',
+            'gradient-sunshine-coral': 'linear-gradient(135deg, #FFD97D 0%, #FF8B7B 100%)',
+            'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+            'mesh-gradient': `
+              radial-gradient(at 40% 20%, rgba(125, 211, 192, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 0%, rgba(168, 216, 234, 0.3) 0px, transparent 50%),
+              radial-gradient(at 0% 50%, rgba(255, 139, 123, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 50%, rgba(255, 217, 125, 0.3) 0px, transparent 50%),
+              radial-gradient(at 0% 100%, rgba(168, 216, 234, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 100%, rgba(125, 211, 192, 0.3) 0px, transparent 50%)
+            `,
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'slide-up': 'slideUp 0.6s ease-out',
+            'slide-in-left': 'slideInLeft 0.6s ease-out',
+            'slide-in-right': 'slideInRight 0.6s ease-out',
+            'scale-in': 'scaleIn 0.5s ease-out',
+            'pulse-soft': 'pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 3s ease-in-out infinite',
+            'gradient-shift': 'gradientShift 8s ease infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideInLeft: {
+              '0%': { transform: 'translateX(-30px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            slideInRight: {
+              '0%': { transform: 'translateX(30px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0.95)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.8' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            gradientShift: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+          },
+        },
+      },
+      plugins: [],
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Glassmorphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #7DD3C0 0%, #FF8B7B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Animated gradient background */
+    .animated-gradient {
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    /* Mobile menu transition */
+    .mobile-menu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-cream text-slate-dark antialiased">
+
+  <!-- Skip to main content (Accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-mint-400 text-white px-4 py-2 rounded-button z-50">
+    Saltar al contenido principal
+  </a>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#top" class="flex items-center space-x-2">
+            <img
+              src="assets/images/logos/ialogia-logo-final.png"
+              alt="iAlogia - Academia de Habilidades Digitales con IA"
+              class="h-14 object-contain rounded-full"
+              loading="eager"
+            />
+            <span class="font-display font-bold text-xl text-slate-dark hidden sm:inline">
+              ialogía
+            </span>
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex md:items-center md:space-x-8">
+          <a href="#programa" class="text-slate-dark hover:text-mint-600 transition-colors font-medium">Programa</a>
+          <a href="#herramientas" class="text-slate-dark hover:text-mint-600 transition-colors font-medium">Herramientas</a>
+          <a href="#video" class="text-slate-dark hover:text-mint-600 transition-colors font-medium">Video</a>
+          <a href="#contacto" class="text-slate-dark hover:text-mint-600 transition-colors font-medium">Contacto</a>
+          <a href="#inscripcion" class="bg-gradient-mint-coral text-white px-6 py-3 rounded-button font-display font-semibold hover:shadow-lift transform hover:scale-105 transition-all duration-300">
+            ¡Asegurar Plaza!
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" type="button" class="text-slate-dark hover:text-mint-600 focus:outline-none focus:ring-2 focus:ring-mint-400 rounded-lg p-2" aria-label="Menú principal" aria-expanded="false">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden glass mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#programa" class="block px-3 py-2 rounded-md text-base font-medium text-slate-dark hover:bg-mint-100 transition-colors">Programa</a>
+        <a href="#herramientas" class="block px-3 py-2 rounded-md text-base font-medium text-slate-dark hover:bg-mint-100 transition-colors">Herramientas</a>
+        <a href="#video" class="block px-3 py-2 rounded-md text-base font-medium text-slate-dark hover:bg-mint-100 transition-colors">Video</a>
+        <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-slate-dark hover:bg-mint-100 transition-colors">Contacto</a>
+        <a href="#inscripcion" class="block mx-3 mt-4 text-center bg-gradient-mint-coral text-white px-6 py-3 rounded-button font-display font-semibold">
+          ¡Asegurar Plaza!
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div id="top"></div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-mesh-gradient bg-cream">
+      <!-- Decorative elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-mint-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-coral-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-sky-soft-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style="animation-delay: 2s;"></div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+          <!-- Hero Content -->
+          <div class="text-center lg:text-left space-y-8 animate-slide-in-left">
+
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-soft">
+              <span class="w-2 h-2 bg-mint-400 rounded-full animate-pulse-soft"></span>
+              <span class="text-sm font-semibold text-slate-dark">Programa 2026 - Plazas Limitadas</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-display font-bold text-hero-mobile md:text-hero text-slate-dark leading-tight">
+              Academia de Habilidades Digitales con
+              <span class="gradient-text">Inteligencia Artificial</span>
+            </h1>
+
+            <!-- Subheading -->
+            <h2 class="text-xl md:text-2xl text-slate-dark/80 font-body font-medium leading-relaxed">
+              Aprender a Aprender en la Era de la Inteligencia Artificial
+            </h2>
+
+            <!-- Value Proposition -->
+            <p class="text-lg text-slate-dark/70 leading-relaxed max-w-2xl">
+              Transformamos a jóvenes de <strong class="text-mint-600">10 a 16 años</strong> de consumidores pasivos en
+              <strong class="text-coral-500">creadores activos de conocimiento</strong>, dominando la IA como herramienta fundamental
+              de estudio, investigación y creación personal.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a href="#inscripcion" class="group bg-gradient-mint-coral text-white px-8 py-4 rounded-button font-display font-bold text-lg hover:shadow-lift transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center">
+                ¡Asegurar la Plaza!
+                <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a href="#video" class="bg-white text-slate-dark px-8 py-4 rounded-button font-display font-semibold text-lg hover:shadow-card transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center border-2 border-slate-dark/10">
+                Ver Video
+                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Social Proof / Badges -->
+            <div class="flex flex-wrap gap-6 items-center justify-center lg:justify-start pt-4">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-sunshine-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                <span class="text-sm font-medium text-slate-dark/70">Metodología probada</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-mint-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-sm font-medium text-slate-dark/70">Desarrollo garantizado</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-coral-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                </svg>
+                <span class="text-sm font-medium text-slate-dark/70">Grupos reducidos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div class="relative animate-slide-in-right">
+            <div class="relative z-10">
+              <!-- Hero Illustration -->
+              <div class="aspect-square rounded-card shadow-lift overflow-hidden bg-gradient-sky-mint/10">
+                <img
+                  src="assets/images/illustrations/hero-aprender.png"
+                  alt="Jóvenes aprendiendo con tecnología e Inteligencia Artificial"
+                  class="w-full h-full object-cover object-center"
+                  loading="eager"
+                />
+              </div>
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute -top-4 -right-4 w-32 h-32 bg-sunshine-300 rounded-full opacity-50 blur-2xl"></div>
+            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-coral-300 rounded-full opacity-50 blur-2xl"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-slate-dark/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Problema y Solución (Doble Valor) -->
+    <section id="problema-solucion" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Placeholder content -->
+        <div class="text-center max-w-4xl mx-auto">
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6">
+            ¿Busca que su hijo/a no solo sepa usar la tecnología, sino que sepa
+            <span class="gradient-text">pensar y aprender</span> con ella?
+          </h2>
+          <p class="text-lg text-slate-dark/70 mb-12">Sección: Problema y Solución - Doble Valor</p>
+          <!-- Contenido a desarrollar -->
+          <div class="grid md:grid-cols-2 gap-8 mt-12">
+            <div class="glass p-8 rounded-card shadow-card">
+              <h3 class="font-display font-bold text-2xl mb-4 text-coral-600">Problema</h3>
+              <p class="text-slate-dark/70">Consumidor pasivo de tecnología</p>
+            </div>
+            <div class="glass p-8 rounded-card shadow-card">
+              <h3 class="font-display font-bold text-2xl mb-4 text-mint-600">Solución</h3>
+              <p class="text-slate-dark/70">Creador activo con IA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Características y Pedagogía Única -->
+    <section id="caracteristicas" class="py-20 bg-cream">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6">
+            Nuestra Pedagogía <span class="gradient-text">Única</span>
+          </h2>
+          <p class="text-lg text-slate-dark/70">Sección: Características y Pedagogía</p>
+        </div>
+        <!-- Cards de características -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- APB - Aprendizaje Basado en Proyectos -->
+          <div class="glass p-8 rounded-card shadow-card hover:shadow-lift transition-all duration-300 group">
+            <div class="w-16 h-16 bg-mint-400 rounded-2xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl mb-3 text-mint-600">APB</h3>
+            <p class="text-slate-dark/70">Aprendizaje Basado en Proyectos</p>
+          </div>
+
+          <!-- Tool-agnostic -->
+          <div class="glass p-8 rounded-card shadow-card hover:shadow-lift transition-all duration-300 group">
+            <div class="w-16 h-16 bg-coral-400 rounded-2xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl mb-3 text-coral-500">Tool-agnostic</h3>
+            <p class="text-slate-dark/70">Enfoque en habilidades, no herramientas</p>
+          </div>
+
+          <!-- Escalable -->
+          <div class="glass p-8 rounded-card shadow-card hover:shadow-lift transition-all duration-300 group">
+            <div class="w-16 h-16 bg-sky-soft-300 rounded-2xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-xl mb-3 text-sky-soft-600">Escalable</h3>
+            <p class="text-slate-dark/70">Por edad y nivel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programa - La Ruta Anual -->
+    <section id="programa" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6">
+            La Ruta <span class="gradient-text">Anual</span>
+          </h2>
+          <p class="text-lg text-slate-dark/70">Sección: Contenido del Programa - 3 Trimestres</p>
+        </div>
+        <!-- Placeholder para timeline -->
+        <div class="space-y-8">
+          <div class="glass p-8 rounded-card shadow-card">
+            <h3 class="font-display font-bold text-2xl mb-4 text-mint-600">T1: Fundamentos y Creatividad</h3>
+            <p class="text-slate-dark/70">Módulos + Proyecto Final</p>
+          </div>
+          <div class="glass p-8 rounded-card shadow-card">
+            <h3 class="font-display font-bold text-2xl mb-4 text-coral-500">T2: Investigación y Profundización</h3>
+            <p class="text-slate-dark/70">Módulos + Proyecto Final</p>
+          </div>
+          <div class="glass p-8 rounded-card shadow-card">
+            <h3 class="font-display font-bold text-2xl mb-4 text-sky-soft-600">T3: Integración y Proyecto Final</h3>
+            <p class="text-slate-dark/70">Módulos + Proyecto Final</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Herramientas de Vanguardia -->
+    <section id="herramientas" class="py-20 bg-cream">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6">
+            El <span class="gradient-text">Arsenal</span> de Herramientas
+          </h2>
+          <p class="text-lg text-slate-dark/70">Sección: Herramientas de Vanguardia - 4 categorías</p>
+        </div>
+        <!-- Grid de herramientas -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Modelos de Lenguaje -->
+          <div class="bg-white p-6 rounded-card shadow-card text-center hover:shadow-lift transition-all duration-300 group">
+            <div class="w-20 h-20 bg-mint-200 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 group-hover:bg-mint-300 transition-all duration-300">
+              <svg class="w-12 h-12 text-mint-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+            </div>
+            <h4 class="font-display font-semibold text-lg mb-2 text-mint-600">Modelos de Lenguaje</h4>
+            <p class="text-sm text-slate-dark/70">ChatGPT, Gemini, Copilot</p>
+          </div>
+
+          <!-- Generación de Imagen -->
+          <div class="bg-white p-6 rounded-card shadow-card text-center hover:shadow-lift transition-all duration-300 group">
+            <div class="w-20 h-20 bg-coral-200 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 group-hover:bg-coral-300 transition-all duration-300">
+              <svg class="w-12 h-12 text-coral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h4 class="font-display font-semibold text-lg mb-2 text-coral-600">Generación de Imagen</h4>
+            <p class="text-sm text-slate-dark/70">DALL-E 3, Canva</p>
+          </div>
+
+          <!-- Generación de Video -->
+          <div class="bg-white p-6 rounded-card shadow-card text-center hover:shadow-lift transition-all duration-300 group">
+            <div class="w-20 h-20 bg-sky-soft-200 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 group-hover:bg-sky-soft-300 transition-all duration-300">
+              <svg class="w-12 h-12 text-sky-soft-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h4 class="font-display font-semibold text-lg mb-2 text-sky-soft-700">Generación de Video</h4>
+            <p class="text-sm text-slate-dark/70">Runway ML, Pika Labs</p>
+          </div>
+
+          <!-- Aprendizaje -->
+          <div class="bg-white p-6 rounded-card shadow-card text-center hover:shadow-lift transition-all duration-300 group">
+            <div class="w-20 h-20 bg-sunshine-200 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 group-hover:bg-sunshine-300 transition-all duration-300">
+              <svg class="w-12 h-12 text-sunshine-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <h4 class="font-display font-semibold text-lg mb-2 text-sunshine-700">Aprendizaje</h4>
+            <p class="text-sm text-slate-dark/70">ML for Kids, NotebookLM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NotebookLM Especializado -->
+    <section id="notebooklm" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+          <div class="glass p-12 rounded-card shadow-lift border-2 border-mint-400">
+            <div class="flex items-start gap-4 mb-6">
+              <span class="bg-gradient-mint-coral text-white px-4 py-2 rounded-full text-sm font-bold">Premium 13+</span>
+            </div>
+            <h2 class="font-display font-bold text-3xl md:text-4xl text-slate-dark mb-6">
+              Módulo Especializado: <span class="gradient-text">NotebookLM</span>
+            </h2>
+            <p class="text-lg text-slate-dark/70">Sección: NotebookLM para estudiantes 13+ - Valor académico</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="py-20 bg-slate-dark">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-6">
+            Descubre Nuestra <span class="text-mint-400">Academia</span>
+          </h2>
+          <p class="text-lg text-white/70">Sección: Video promocional</p>
+        </div>
+        <!-- Video de YouTube -->
+        <div class="max-w-4xl mx-auto">
+          <div class="aspect-video rounded-card shadow-lift overflow-hidden bg-slate-800">
+            <iframe
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/clqZplrQPqA"
+              title="Academia de Habilidades Digitales con IA - Video Promocional"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metacognición -->
+    <section id="metacognicion" class="py-20 bg-cream">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6">
+            Fomento de la <span class="gradient-text">Metacognición</span>
+          </h2>
+          <p class="text-lg text-slate-dark/70">Sección: Metacognición - Pensar sobre el pensamiento</p>
+        </div>
+        <!-- Placeholder -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="glass p-8 rounded-card shadow-card">
+            <h3 class="font-display font-bold text-xl mb-4">Organizar y cuestionar fuentes</h3>
+            <p class="text-slate-dark/70">Contenido a desarrollar</p>
+          </div>
+          <div class="glass p-8 rounded-card shadow-card">
+            <h3 class="font-display font-bold text-xl mb-4">Formular preguntas efectivas</h3>
+            <p class="text-slate-dark/70">Contenido a desarrollar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="inscripcion" class="py-20 bg-gradient-mint-coral relative overflow-hidden">
+      <div class="absolute inset-0 bg-mesh-gradient opacity-30"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h2 class="font-display font-bold text-4xl md:text-5xl mb-6">
+            Transforme el Futuro de su Hijo/a
+          </h2>
+          <p class="text-xl md:text-2xl mb-8 text-white/90">
+            Plazas limitadas para el programa 2026. Desarrollo y autonomía garantizados.
+          </p>
+          <!-- Placeholder para formulario -->
+          <div class="bg-white/10 backdrop-blur-lg p-8 rounded-card shadow-lift">
+            <p class="text-white font-display font-semibold text-lg mb-4">Formulario de Inscripción</p>
+            <p class="text-white/80 text-sm">Contenido a desarrollar</p>
+            <button class="mt-6 bg-white text-mint-600 px-10 py-4 rounded-button font-display font-bold text-lg hover:shadow-lift transform hover:scale-105 transition-all duration-300">
+              ¡Quiero Inscribir a mi Hijo/a!
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="contacto" class="bg-slate-dark text-white py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <!-- Logo y descripción -->
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <img
+              src="assets/images/logos/ialogia-logo-final.png"
+              alt="iAlogia"
+              class="h-14 object-contain rounded-full"
+              loading="lazy"
+            />
+            <span class="font-display font-bold text-xl">ialogía</span>
+          </div>
+          <p class="text-white/70 max-w-md">
+            Transformando jóvenes en creadores activos de conocimiento con Inteligencia Artificial.
+          </p>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-4">Enlaces</h4>
+          <ul class="space-y-2">
+            <li><a href="#programa" class="text-white/70 hover:text-mint-400 transition-colors">Programa</a></li>
+            <li><a href="#herramientas" class="text-white/70 hover:text-mint-400 transition-colors">Herramientas</a></li>
+            <li><a href="#video" class="text-white/70 hover:text-mint-400 transition-colors">Video</a></li>
+            <li><a href="#inscripcion" class="text-white/70 hover:text-mint-400 transition-colors">Inscripción</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-4">Contacto</h4>
+          <ul class="space-y-2 text-white/70">
+            <li>
+              <a href="mailto:info@ialogia.es" class="hover:text-mint-400 transition-colors">
+                Email: info@ialogia.es
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-white/10 pt-8 text-center text-white/60 text-sm space-y-2">
+        <p>&copy; 2026 ialogía - Academia de Habilidades Digitales con IA. Todos los derechos reservados.</p>
+        <p>
+          ialogía es un proyecto de
+          <a href="https://www.arteux.top" target="_blank" rel="noopener noreferrer" class="text-mint-400 hover:text-mint-300 transition-colors font-medium">
+            ArteUX
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Navbar background on scroll
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('glass', 'shadow-card');
+      } else {
+        navbar.classList.remove('glass', 'shadow-card');
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
