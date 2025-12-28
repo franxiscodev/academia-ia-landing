@@ -1,0 +1,30 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos temporales
+*.log
+*.tmp
+*~
+
+# Node modules (si usas npm en el futuro)
+node_modules/
+
+# Archivos de desarrollo
+.env
+.env.local
+
+# Archivos grandes (opcional - si no quieres versionar videos/imágenes pesadas)
+# assets/videos/*.mp4
+# assets/images/*.psd
+
+
+
+
+
