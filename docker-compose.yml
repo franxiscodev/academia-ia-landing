@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  # Servidor Web PHP + Apache
+  web:
+    image: php:8.2-apache
+    container_name: academia-ia-web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - CONTACT_EMAIL=${CONTACT_EMAIL}
+      - FROM_EMAIL=${FROM_EMAIL}
+      - DEBUG=${DEBUG}
+    command: >
+      bash -c "
+      docker-php-ext-install pdo pdo_mysql &&
+      apache2-foreground
+      "
+    networks:
+      - academia-network
+    restart: unless-stopped
+
+  # Base de datos MySQL
+  db:
+    image: mysql:8.0
+    container_name: academia-ia-db
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - academia-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # phpMyAdmin (opcional, para gestionar la BD visualmente)
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: academia-ia-phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+    depends_on:
+      - db
+    networks:
+      - academia-network
+    restart: unless-stopped
+
+networks:
+  academia-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local

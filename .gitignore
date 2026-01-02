@@ -20,6 +20,11 @@ node_modules/
 .env
 .env.local
 
+# Docker y base de datos
+docker-compose.override.yml
+mysql_data/
+*.sql.backup
+
 # Archivos grandes (opcional - si no quieres versionar videos/imágenes pesadas)
 # assets/videos/*.mp4
 # assets/images/*.psd

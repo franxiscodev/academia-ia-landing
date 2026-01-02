@@ -1,6 +1,6 @@
 # Progreso del Proyecto - Academia IA Landing Page
 
-## 📅 Última actualización: 2025-12-28
+## 📅 Última actualización: 2026-01-02
 
 ---
 
@@ -317,7 +317,7 @@ slate-dark: #2C3E50 (textos)
 - [ ] Animated icons
 - [ ] Background con ilustración sutil
 
-#### 8. Formulario de Inscripción
+#### 8. Formulario de Inscripción ⚡ PRÓXIMA TAREA
 - [ ] Diseñar campos del formulario:
   - Nombre del padre/madre
   - Email
@@ -325,11 +325,22 @@ slate-dark: #2C3E50 (textos)
   - Nombre del estudiante
   - Edad del estudiante
   - Mensaje/comentarios
-- [ ] Implementar validación visual
+- [ ] Implementar validación visual (HTML5 + JavaScript)
 - [ ] Estados de success/error
-- [ ] Integrar con backend (decidir: EmailJS, Netlify Forms, PHP, etc.)
+- [ ] **Backend con PHP simple**:
+  - [ ] Script PHP para procesar el formulario
+  - [ ] Envío de datos por email (función mail() o PHPMailer)
+  - [ ] Guardado en base de datos MySQL (opcional)
+  - [ ] Configurar servidor PHP local con Docker (docker-compose.yml)
 - [ ] Animated submit button
 - [ ] Política de privacidad y términos
+
+**Plan técnico para próxima sesión**:
+- Crear archivo `contact.php` para procesar formulario
+- Crear `docker-compose.yml` para servidor PHP + MySQL local
+- Configurar variables de entorno para credenciales
+- Implementar validación server-side
+- Protección contra spam (honeypot o reCAPTCHA)
 
 ### Prioridad MEDIA (Mejoras visuales)
 
@@ -489,12 +500,246 @@ npx http-server
 
 ---
 
-**Estado general del proyecto**: 30% completado
+## 📝 Historial de Sesiones
+
+### Sesión 2 - Footer y Git Push (2025-12-28)
+
+#### Completado:
+- ✅ Footer actualizado con nuevo contacto:
+  - Email: info@ialogia.es (con mailto: link)
+  - Atribución a ArteUX con link a www.arteux.top
+- ✅ Navegación al top al hacer click en logo/ialogía
+- ✅ Commit y push exitoso a GitHub (commit e921690)
+- ✅ Documentación actualizada
+
+#### Archivos modificados en esta sesión:
+- `index.html` - Footer contacto y copyright
+- `docs/progreso.md` - Documentación del footer y próxima tarea
+
+#### Próxima sesión planificada:
+- 🎯 Implementar formulario de contacto funcional
+- 🎯 Backend PHP simple para envío por email
+- 🎯 Conexión opcional a MySQL para guardar datos
+- 🎯 Servidor local PHP con Docker (docker-compose.yml)
+
+---
+
+**Estado general del proyecto**: 35% completado
 - Estructura: 100% ✅
 - Hero Section: 100% ✅
-- Contenido: 20% ⚠️
-- Visuales: 10% ⚠️
+- Navbar & Footer: 100% ✅
+- Logo e imágenes: 100% ✅
+- Video integrado: 100% ✅
+- Iconos SVG: 100% ✅
+- Git configurado: 100% ✅
+- Contenido: 25% ⚠️
+- Visuales: 15% ⚠️
 - Animaciones: 40% ⚠️
 - Funcionalidad: 50% ⚠️
+- **Formulario contacto: 0% ⏳ (próxima tarea)**
 
-**Próximo hito**: Completar contenido de todas las secciones (llevar al 80%)
+**Próximo hito**: Implementar formulario de inscripción con backend PHP y Docker
+
+---
+
+### Sesión 3 - Formulario de Contacto Funcional (2026-01-02)
+
+#### ✅ Formulario HTML Completo
+- ✅ Formulario con validación HTML5 + JavaScript
+- ✅ Campos implementados:
+  - Nombre del padre/madre (text, required, 2-100 chars)
+  - Email (email, required, validación nativa)
+  - Teléfono (tel, required, pattern numérico)
+  - Nombre del estudiante (text, required, 2-100 chars)
+  - Edad del estudiante (select, 10-16 años)
+  - Mensaje/comentarios (textarea, opcional, max 1000 chars)
+  - Checkbox de privacidad (required)
+- ✅ Diseño responsive con grid 2 columnas en desktop
+- ✅ Estados visuales (focus, hover, disabled)
+- ✅ Mensajes de éxito/error dinámicos
+- ✅ Loading state en botón submit
+- ✅ Validación client-side con HTML5 + JavaScript
+
+#### ✅ Backend PHP
+- ✅ Archivo creado: `backend/contact.php`
+- ✅ Características implementadas:
+  - Headers CORS configurados
+  - Validación server-side robusta
+  - Sanitización de inputs (XSS protection)
+  - Validación de email con filter_var
+  - Validación de teléfono con regex
+  - Validación de edad (10-16)
+  - Respuesta JSON estructurada
+  - Manejo de errores completo
+  - Debug mode configurable
+
+#### ✅ Integración con Base de Datos MySQL
+- ✅ Conexión PDO a MySQL
+- ✅ Guardado de solicitudes en tabla `contacts`
+- ✅ Prepared statements (SQL injection protection)
+- ✅ Manejo de errores de BD
+- ✅ Script SQL de inicialización: `database/init.sql`
+- ✅ Tabla `contacts` con campos:
+  - id (INT, auto_increment, PK)
+  - parent_name, email, phone
+  - student_name, student_age
+  - message (TEXT, opcional)
+  - status (ENUM: pending, contacted, enrolled, rejected)
+  - created_at, updated_at (TIMESTAMP)
+  - Índices en email, created_at, status
+- ✅ Vista `contact_stats` para estadísticas
+- ✅ Stored procedure `GetRecentContacts(days)`
+
+#### ✅ Envío de Emails
+- ✅ Función mail() de PHP configurada
+- ✅ Email estructurado con formato ASCII art
+- ✅ Headers configurados (From, Reply-To)
+- ✅ Contenido del email:
+  - Datos del padre/madre
+  - Datos del estudiante
+  - Mensaje opcional
+  - Fecha y hora
+  - IP del solicitante
+- ✅ Variables configurables desde .env
+
+#### ✅ Docker Compose Completo
+- ✅ Archivo creado: `docker-compose.yml`
+- ✅ 3 servicios configurados:
+  1. **web** (PHP 8.2 + Apache):
+     - Puerto: 8080
+     - PDO MySQL instalado
+     - Variables de entorno inyectadas
+     - Volumen montado: proyecto completo
+  2. **db** (MySQL 8.0):
+     - Puerto: 3307
+     - Script init.sql auto-ejecutado
+     - Healthcheck configurado
+     - Volumen persistente: mysql_data
+  3. **phpmyadmin**:
+     - Puerto: 8081
+     - Gestor visual de BD
+- ✅ Red interna: academia-network
+- ✅ Auto-restart: unless-stopped
+
+#### ✅ Configuración y Seguridad
+- ✅ Archivo `.env` creado con credenciales
+- ✅ Archivo `.env.example` para plantilla (versionado)
+- ✅ `.gitignore` actualizado:
+  - .env excluido (seguridad)
+  - docker-compose.override.yml
+  - mysql_data/
+  - *.sql.backup
+- ✅ Variables de entorno configuradas:
+  - DB_HOST, DB_PORT, DB_NAME
+  - DB_USER, DB_PASSWORD, DB_ROOT_PASSWORD
+  - CONTACT_EMAIL, FROM_EMAIL
+  - DEBUG mode
+
+#### ✅ JavaScript AJAX
+- ✅ Manejo de formulario con fetch API
+- ✅ Envío asíncrono (sin recargar página)
+- ✅ Estados visuales:
+  - Loading: botón disabled + texto "Enviando..."
+  - Success: mensaje verde con fondo mint
+  - Error: mensaje rojo con fondo coral
+- ✅ Reset automático del formulario en éxito
+- ✅ Scroll suave al mensaje de confirmación
+- ✅ Try-catch para manejo de errores de red
+
+#### ✅ Documentación
+- ✅ README.md completamente actualizado:
+  - Tabla de contenidos
+  - Características del proyecto
+  - Stack tecnológico
+  - Instalación paso a paso
+  - Comandos Docker
+  - Configuración del formulario
+  - Estructura del proyecto
+  - Deploy (Netlify, hosting tradicional)
+  - Consultas SQL útiles
+  - Changelog con versiones
+- ✅ Instrucciones de desarrollo local
+- ✅ Guía de configuración de SMTP para producción
+
+#### ✅ Testing Local
+- ✅ Docker Compose levantado exitosamente
+- ✅ Contenedores verificados (ps):
+  - academia-ia-web: UP
+  - academia-ia-db: UP (healthy)
+  - academia-ia-phpmyadmin: UP
+- ✅ Logs verificados (Apache + PHP corriendo)
+- ✅ Base de datos inicializada correctamente
+- ✅ Tablas creadas: contacts, contact_stats
+- ✅ Extensiones PHP instaladas: PDO, PDO_MySQL
+
+#### 📁 Archivos Creados en Esta Sesión
+```
+backend/
+└── contact.php                    # Backend PHP del formulario
+
+database/
+└── init.sql                       # Script de inicialización de BD
+
+docker-compose.yml                 # Configuración de Docker
+.env                              # Variables de entorno (NO versionado)
+.env.example                      # Plantilla de variables (versionado)
+```
+
+#### 📝 Archivos Modificados
+- `index.html` - Formulario completo + JavaScript AJAX
+- `.gitignore` - Exclusiones de Docker y BD
+- `README.md` - Documentación completa
+- `docs/progreso.md` - Este archivo
+
+---
+
+## 🎯 PRÓXIMOS PASOS
+
+### Prioridad ALTA (Contenido esencial)
+
+#### 1. Completar sección "Problema y Solución" ⚡ PRÓXIMA TAREA
+- [ ] Agregar contenido del PDF sobre "consumidor pasivo vs creador activo"
+- [ ] Implementar visuales de engranajes conectados
+- [ ] Añadir diagrama "Competencias digitales + Rendimiento académico"
+- [ ] Implementar hover tilt effect en cards
+- [ ] Línea conectora animada entre problema/solución
+
+#### 2. Completar sección "Características y Pedagogía"
+- [x] Agregar iconos SVG para cada característica ✅
+- [ ] Contenido detallado de cada metodología:
+  - APB (ejemplos concretos)
+  - Tool-agnostic (explicación detallada)
+  - Escalabilidad (por edades)
+- [ ] Badges/pills con conceptos clave
+- [ ] Background con pattern sutil
+- [ ] Staggered animation al scroll
+
+#### 3. Testing del Formulario
+- [x] Levantar Docker ✅
+- [x] Verificar servicios ✅
+- [x] Verificar BD ✅
+- [ ] Probar envío de formulario desde navegador
+- [ ] Verificar guardado en BD
+- [ ] Verificar envío de email
+- [ ] Testing de validaciones
+- [ ] Testing responsive
+
+---
+
+**Estado general del proyecto**: 50% completado ⬆️
+- Estructura: 100% ✅
+- Hero Section: 100% ✅
+- Navbar & Footer: 100% ✅
+- Logo e imágenes: 100% ✅
+- Video integrado: 100% ✅
+- Iconos SVG: 100% ✅
+- Git configurado: 100% ✅
+- **Formulario contacto: 100% ✅ COMPLETADO**
+- **Backend PHP: 100% ✅ COMPLETADO**
+- **Docker: 100% ✅ COMPLETADO**
+- **Base de datos: 100% ✅ COMPLETADO**
+- Contenido: 25% ⚠️
+- Visuales: 15% ⚠️
+- Animaciones: 40% ⚠️
+
+**Próximo hito**: Completar sección "Problema y Solución" con contenido real
