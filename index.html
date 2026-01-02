@@ -602,27 +602,347 @@
     </section>
 
     <!-- Programa - La Ruta Anual -->
-    <section id="programa" class="py-20 bg-white">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="programa" class="py-20 bg-white relative overflow-hidden">
+      <!-- Background decorativo -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-20 right-20 w-64 h-64 bg-mint-200 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-64 h-64 bg-coral-200 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Título principal -->
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6">
             La Ruta <span class="gradient-text">Anual</span>
           </h2>
-          <p class="text-lg text-slate-dark/70">Sección: Contenido del Programa - 3 Trimestres</p>
+          <p class="text-xl text-slate-dark/70 mb-4">
+            Un viaje de transformación en 3 trimestres
+          </p>
+          <p class="text-slate-dark/60">
+            De consumidor pasivo a creador activo con IA
+          </p>
         </div>
-        <!-- Placeholder para timeline -->
-        <div class="space-y-8">
-          <div class="glass p-8 rounded-card shadow-card">
-            <h3 class="font-display font-bold text-2xl mb-4 text-mint-600">T1: Fundamentos y Creatividad</h3>
-            <p class="text-slate-dark/70">Módulos + Proyecto Final</p>
+
+        <!-- Timeline -->
+        <div class="max-w-7xl mx-auto">
+          <div class="space-y-12 md:space-y-16">
+
+            <!-- TRIMESTRE 1 -->
+            <div class="group relative">
+              <!-- Timeline connector (solo desktop) -->
+              <div class="hidden md:block absolute left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-mint-400 to-coral-400 opacity-20"></div>
+
+              <div class="grid md:grid-cols-12 gap-8 items-start">
+                <!-- Número y Badge -->
+                <div class="md:col-span-2 flex flex-col items-center md:items-start">
+                  <div class="w-24 h-24 bg-gradient-to-br from-mint-400 to-mint-500 rounded-full flex items-center justify-center shadow-lift group-hover:scale-110 transition-transform duration-300 relative z-10">
+                    <span class="text-white font-display font-bold text-4xl">1</span>
+                  </div>
+                  <div class="mt-4 inline-block bg-mint-100 text-mint-700 px-3 py-1 rounded-full text-xs font-bold">
+                    Sep - Dic
+                  </div>
+                </div>
+
+                <!-- Contenido del trimestre -->
+                <div class="md:col-span-10">
+                  <div class="glass p-8 md:p-10 rounded-card shadow-card hover:shadow-lift transition-all duration-500 border-l-4 border-mint-400">
+                    <!-- Encabezado -->
+                    <div class="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 class="font-display font-bold text-3xl text-mint-600 mb-2">
+                          Fundamentos y Creatividad
+                        </h3>
+                        <p class="text-slate-dark/70 text-lg">
+                          Primeros pasos con IA generativa
+                        </p>
+                      </div>
+                      <div class="hidden md:block">
+                        <svg class="w-16 h-16 text-mint-400 opacity-20" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Módulos -->
+                    <div class="mb-6">
+                      <h4 class="font-display font-semibold text-lg text-slate-dark mb-4 flex items-center">
+                        <svg class="w-5 h-5 text-mint-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Módulos
+                      </h4>
+                      <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3 p-3 bg-mint-50 rounded-lg">
+                          <span class="text-mint-500 mt-1">📝</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Introducción a ChatGPT y prompts</p>
+                            <p class="text-sm text-slate-dark/60">Fundamentos de interacción con IA</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-mint-50 rounded-lg">
+                          <span class="text-mint-500 mt-1">🎨</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Generación de imágenes con DALL-E</p>
+                            <p class="text-sm text-slate-dark/60">Creatividad visual con IA</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-mint-50 rounded-lg">
+                          <span class="text-mint-500 mt-1">✍️</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Escritura creativa asistida</p>
+                            <p class="text-sm text-slate-dark/60">Cuentos, poemas y narrativa</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-mint-50 rounded-lg">
+                          <span class="text-mint-500 mt-1">🎯</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Ética y responsabilidad digital</p>
+                            <p class="text-sm text-slate-dark/60">Uso consciente de la IA</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Proyecto Final -->
+                    <div class="p-6 bg-gradient-to-r from-mint-50 to-mint-100/50 rounded-xl border-2 border-mint-200">
+                      <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                          <div class="w-12 h-12 bg-mint-400 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="flex-1">
+                          <h4 class="font-display font-bold text-lg text-mint-700 mb-2">Proyecto Final T1</h4>
+                          <p class="text-slate-dark/80 font-semibold mb-2">
+                            "Mi Historia Ilustrada con IA"
+                          </p>
+                          <p class="text-slate-dark/70 text-sm">
+                            Creación de un cuento original combinando texto generado con ChatGPT e ilustraciones con DALL-E. Presentación digital del proyecto.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TRIMESTRE 2 -->
+            <div class="group relative">
+              <!-- Timeline connector (solo desktop) -->
+              <div class="hidden md:block absolute left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-coral-400 to-sky-soft-400 opacity-20"></div>
+
+              <div class="grid md:grid-cols-12 gap-8 items-start">
+                <!-- Número y Badge -->
+                <div class="md:col-span-2 flex flex-col items-center md:items-start">
+                  <div class="w-24 h-24 bg-gradient-to-br from-coral-400 to-coral-500 rounded-full flex items-center justify-center shadow-lift group-hover:scale-110 transition-transform duration-300 relative z-10">
+                    <span class="text-white font-display font-bold text-4xl">2</span>
+                  </div>
+                  <div class="mt-4 inline-block bg-coral-100 text-coral-700 px-3 py-1 rounded-full text-xs font-bold">
+                    Ene - Mar
+                  </div>
+                </div>
+
+                <!-- Contenido del trimestre -->
+                <div class="md:col-span-10">
+                  <div class="glass p-8 md:p-10 rounded-card shadow-card hover:shadow-lift transition-all duration-500 border-l-4 border-coral-400">
+                    <!-- Encabezado -->
+                    <div class="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 class="font-display font-bold text-3xl text-coral-600 mb-2">
+                          Investigación y Profundización
+                        </h3>
+                        <p class="text-slate-dark/70 text-lg">
+                          Desarrollo de pensamiento crítico
+                        </p>
+                      </div>
+                      <div class="hidden md:block">
+                        <svg class="w-16 h-16 text-coral-400 opacity-20" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Módulos -->
+                    <div class="mb-6">
+                      <h4 class="font-display font-semibold text-lg text-slate-dark mb-4 flex items-center">
+                        <svg class="w-5 h-5 text-coral-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Módulos
+                      </h4>
+                      <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3 p-3 bg-coral-50 rounded-lg">
+                          <span class="text-coral-500 mt-1">🔍</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Investigación académica con IA</p>
+                            <p class="text-sm text-slate-dark/60">Búsqueda y verificación de fuentes</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-coral-50 rounded-lg">
+                          <span class="text-coral-500 mt-1">💡</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Formulación de preguntas efectivas</p>
+                            <p class="text-sm text-slate-dark/60">Técnicas de prompt engineering</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-coral-50 rounded-lg">
+                          <span class="text-coral-500 mt-1">🎬</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Creación de videos con IA</p>
+                            <p class="text-sm text-slate-dark/60">Runway ML y herramientas multimedia</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-coral-50 rounded-lg">
+                          <span class="text-coral-500 mt-1">📊</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Análisis y síntesis de información</p>
+                            <p class="text-sm text-slate-dark/60">Organización del conocimiento</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Proyecto Final -->
+                    <div class="p-6 bg-gradient-to-r from-coral-50 to-coral-100/50 rounded-xl border-2 border-coral-200">
+                      <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                          <div class="w-12 h-12 bg-coral-400 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="flex-1">
+                          <h4 class="font-display font-bold text-lg text-coral-700 mb-2">Proyecto Final T2</h4>
+                          <p class="text-slate-dark/80 font-semibold mb-2">
+                            "Documental de Investigación"
+                          </p>
+                          <p class="text-slate-dark/70 text-sm">
+                            Investigación profunda sobre un tema de interés, utilizando IA para buscar información, generar contenido multimedia y crear un mini-documental.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TRIMESTRE 3 -->
+            <div class="group relative">
+              <div class="grid md:grid-cols-12 gap-8 items-start">
+                <!-- Número y Badge -->
+                <div class="md:col-span-2 flex flex-col items-center md:items-start">
+                  <div class="w-24 h-24 bg-gradient-to-br from-sky-soft-300 to-sky-soft-400 rounded-full flex items-center justify-center shadow-lift group-hover:scale-110 transition-transform duration-300 relative z-10">
+                    <span class="text-white font-display font-bold text-4xl">3</span>
+                  </div>
+                  <div class="mt-4 inline-block bg-sky-soft-100 text-sky-soft-700 px-3 py-1 rounded-full text-xs font-bold">
+                    Abr - Jun
+                  </div>
+                </div>
+
+                <!-- Contenido del trimestre -->
+                <div class="md:col-span-10">
+                  <div class="glass p-8 md:p-10 rounded-card shadow-card hover:shadow-lift transition-all duration-500 border-l-4 border-sky-soft-400">
+                    <!-- Encabezado -->
+                    <div class="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 class="font-display font-bold text-3xl text-sky-soft-700 mb-2">
+                          Integración y Proyecto Final
+                        </h3>
+                        <p class="text-slate-dark/70 text-lg">
+                          Aplicación autónoma y creativa
+                        </p>
+                      </div>
+                      <div class="hidden md:block">
+                        <svg class="w-16 h-16 text-sky-soft-400 opacity-20" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Módulos -->
+                    <div class="mb-6">
+                      <h4 class="font-display font-semibold text-lg text-slate-dark mb-4 flex items-center">
+                        <svg class="w-5 h-5 text-sky-soft-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Módulos
+                      </h4>
+                      <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3 p-3 bg-sky-soft-50 rounded-lg">
+                          <span class="text-sky-soft-600 mt-1">🤖</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">NotebookLM avanzado (13+)</p>
+                            <p class="text-sm text-slate-dark/60">Asistente personal de estudio</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-sky-soft-50 rounded-lg">
+                          <span class="text-sky-soft-600 mt-1">🎓</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Metacognición y autoevaluación</p>
+                            <p class="text-sm text-slate-dark/60">Reflexión sobre el aprendizaje</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-sky-soft-50 rounded-lg">
+                          <span class="text-sky-soft-600 mt-1">⚡</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Automatización y productividad</p>
+                            <p class="text-sm text-slate-dark/60">Herramientas avanzadas</p>
+                          </div>
+                        </div>
+                        <div class="flex items-start space-x-3 p-3 bg-sky-soft-50 rounded-lg">
+                          <span class="text-sky-soft-600 mt-1">🌟</span>
+                          <div>
+                            <p class="font-semibold text-slate-dark">Presentación y comunicación</p>
+                            <p class="text-sm text-slate-dark/60">Compartir conocimiento</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Proyecto Final -->
+                    <div class="p-6 bg-gradient-to-r from-sky-soft-50 to-sky-soft-100/50 rounded-xl border-2 border-sky-soft-300">
+                      <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0">
+                          <div class="w-12 h-12 bg-sky-soft-400 rounded-xl flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="flex-1">
+                          <h4 class="font-display font-bold text-lg text-sky-soft-700 mb-2">Proyecto Final Integrador</h4>
+                          <p class="text-slate-dark/80 font-semibold mb-2">
+                            "Mi Portfolio Digital con IA"
+                          </p>
+                          <p class="text-slate-dark/70 text-sm mb-3">
+                            Creación de un proyecto integrador que demuestre todas las competencias adquiridas. Los estudiantes eligen su tema, investigan, crean contenido multimedia y presentan su trabajo.
+                          </p>
+                          <div class="flex items-center space-x-2">
+                            <span class="inline-block bg-sky-soft-200 text-sky-soft-800 px-2 py-1 rounded text-xs font-semibold">Evaluación Final</span>
+                            <span class="inline-block bg-sunshine-200 text-sunshine-800 px-2 py-1 rounded text-xs font-semibold">Presentación Pública</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="glass p-8 rounded-card shadow-card">
-            <h3 class="font-display font-bold text-2xl mb-4 text-coral-500">T2: Investigación y Profundización</h3>
-            <p class="text-slate-dark/70">Módulos + Proyecto Final</p>
-          </div>
-          <div class="glass p-8 rounded-card shadow-card">
-            <h3 class="font-display font-bold text-2xl mb-4 text-sky-soft-600">T3: Integración y Proyecto Final</h3>
-            <p class="text-slate-dark/70">Módulos + Proyecto Final</p>
+
+          <!-- CTA Final de la sección -->
+          <div class="mt-16 text-center">
+            <div class="inline-block bg-slate-dark text-white px-8 py-6 rounded-card shadow-lift">
+              <p class="text-lg font-semibold mb-2">🎯 Al finalizar el programa:</p>
+              <p class="text-3xl font-display font-bold mb-1">Dominio completo</p>
+              <p class="text-sm opacity-90">de herramientas IA + pensamiento crítico + autonomía digital</p>
+            </div>
           </div>
         </div>
       </div>
