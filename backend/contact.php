@@ -4,6 +4,14 @@
  * Academia IA Landing Page - ialogía
  */
 
+// Iniciar output buffering para evitar que warnings contaminen el JSON
+ob_start();
+
+// Suprimir warnings en la salida (se guardan en logs)
+error_reporting(E_ALL);
+ini_set('display_errors', '0');
+ini_set('log_errors', '1');
+
 // Headers para CORS y JSON
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
@@ -12,9 +20,11 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 // Cargar variables de entorno
 if (file_exists(__DIR__ . '/../.env')) {
-    $env = parse_ini_file(__DIR__ . '/../.env');
-    foreach ($env as $key => $value) {
-        $_ENV[$key] = $value;
+    $env = @parse_ini_file(__DIR__ . '/../.env');
+    if ($env !== false) {
+        foreach ($env as $key => $value) {
+            $_ENV[$key] = $value;
+        }
     }
 }
 
@@ -59,7 +69,7 @@ $privacy = isset($_POST['privacy']) ? true : false;
 // Array de errores
 $errors = [];
 
-// Validaciones
+// Validaciones OBLIGATORIAS (solo 3 campos)
 if (empty($parent_name) || strlen($parent_name) < 2) {
     $errors[] = 'El nombre del padre/madre es requerido (mínimo 2 caracteres)';
 }
@@ -68,20 +78,21 @@ if (empty($email) || !validateEmail($email)) {
     $errors[] = 'Email inválido';
 }
 
-if (empty($phone) || !validatePhone($phone)) {
-    $errors[] = 'Teléfono inválido';
-}
-
-if (empty($student_name) || strlen($student_name) < 2) {
-    $errors[] = 'El nombre del estudiante es requerido (mínimo 2 caracteres)';
-}
-
-if (empty($student_age) || !in_array($student_age, ['10', '11', '12', '13', '14', '15', '16'])) {
-    $errors[] = 'Edad del estudiante inválida';
-}
-
 if (!$privacy) {
     $errors[] = 'Debes aceptar la política de privacidad';
+}
+
+// Validaciones OPCIONALES (solo si se proporcionan)
+if (!empty($phone) && !validatePhone($phone)) {
+    $errors[] = 'Teléfono inválido (si lo proporcionas, debe ser válido)';
+}
+
+if (!empty($student_age) && !in_array($student_age, ['10', '11', '12', '13', '14', '15', '16'])) {
+    $errors[] = 'Edad del estudiante inválida (debe estar entre 10 y 16)';
+}
+
+if (!empty($student_name) && strlen($student_name) < 2) {
+    $errors[] = 'El nombre del estudiante debe tener al menos 2 caracteres';
 }
 
 // Si hay errores, devolver
@@ -120,10 +131,10 @@ try {
     $stmt->execute([
         ':parent_name' => $parent_name,
         ':email' => $email,
-        ':phone' => $phone,
-        ':student_name' => $student_name,
-        ':student_age' => $student_age,
-        ':message' => $message
+        ':phone' => !empty($phone) ? $phone : null,
+        ':student_name' => !empty($student_name) ? $student_name : null,
+        ':student_age' => !empty($student_age) ? (int)$student_age : null,
+        ':message' => !empty($message) ? $message : null
     ]);
 
     $saved_to_db = true;
@@ -223,4 +234,11 @@ if (!$saved_to_db && !$email_sent) {
     ];
 }
 
+// Limpiar cualquier output anterior (warnings, notices, etc.)
+ob_clean();
+
+// Enviar solo el JSON
 echo json_encode($response);
+
+// Finalizar output buffering
+ob_end_flush();

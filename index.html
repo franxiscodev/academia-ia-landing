@@ -390,24 +390,163 @@
     </section>
 
     <!-- Problema y Solución (Doble Valor) -->
-    <section id="problema-solucion" class="py-20 bg-white">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Placeholder content -->
-        <div class="text-center max-w-4xl mx-auto">
-          <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6">
+    <section id="problema-solucion" class="py-20 bg-white relative overflow-hidden">
+      <!-- Background pattern sutil -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-10 left-10 w-32 h-32 border-2 border-coral-400 rounded-full"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 border-2 border-mint-400 rounded-full"></div>
+        <div class="absolute top-1/2 left-1/4 w-24 h-24 border-2 border-sky-soft-300 rounded-full"></div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Título principal -->
+        <div class="text-center max-w-4xl mx-auto mb-16">
+          <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6 leading-tight">
             ¿Busca que su hijo/a no solo sepa usar la tecnología, sino que sepa
             <span class="gradient-text">pensar y aprender</span> con ella?
           </h2>
-          <p class="text-lg text-slate-dark/70 mb-12">Sección: Problema y Solución - Doble Valor</p>
-          <!-- Contenido a desarrollar -->
-          <div class="grid md:grid-cols-2 gap-8 mt-12">
-            <div class="glass p-8 rounded-card shadow-card">
-              <h3 class="font-display font-bold text-2xl mb-4 text-coral-600">Problema</h3>
-              <p class="text-slate-dark/70">Consumidor pasivo de tecnología</p>
+          <p class="text-xl text-slate-dark/70">
+            La diferencia entre consumir contenido y crear conocimiento
+          </p>
+        </div>
+
+        <!-- Grid Problema vs Solución -->
+        <div class="max-w-6xl mx-auto relative">
+          <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+
+            <!-- PROBLEMA -->
+            <div class="group perspective-1000">
+              <div class="glass p-8 md:p-10 rounded-card shadow-card hover:shadow-lift transition-all duration-500 transform hover:scale-[1.02] relative overflow-hidden">
+                <!-- Borde animado -->
+                <div class="absolute inset-0 border-4 border-coral-400/0 group-hover:border-coral-400/30 rounded-card transition-all duration-500"></div>
+
+                <!-- Icono -->
+                <div class="w-20 h-20 bg-coral-100 rounded-2xl mb-6 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-12 h-12 text-coral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+
+                <!-- Título -->
+                <h3 class="font-display font-bold text-3xl mb-4 text-coral-600 text-center">
+                  😟 El Problema
+                </h3>
+
+                <!-- Badge -->
+                <div class="inline-block bg-coral-100 text-coral-700 px-4 py-1 rounded-full text-sm font-semibold mb-6 mx-auto block text-center">
+                  Situación Actual
+                </div>
+
+                <!-- Contenido -->
+                <div class="space-y-4 text-left">
+                  <div class="flex items-start space-x-3">
+                    <span class="text-coral-500 mt-1 flex-shrink-0">❌</span>
+                    <p class="text-slate-dark/80">
+                      <strong>Consumidor pasivo:</strong> Usa la IA como "respuestas rápidas" sin comprender el proceso
+                    </p>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-coral-500 mt-1 flex-shrink-0">❌</span>
+                    <p class="text-slate-dark/80">
+                      <strong>Dependencia tecnológica:</strong> Pierde capacidad de pensamiento crítico y análisis profundo
+                    </p>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-coral-500 mt-1 flex-shrink-0">❌</span>
+                    <p class="text-slate-dark/80">
+                      <strong>Sin metacognición:</strong> No aprende a aprender ni a cuestionar la información
+                    </p>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-coral-500 mt-1 flex-shrink-0">❌</span>
+                    <p class="text-slate-dark/80">
+                      <strong>Rendimiento limitado:</strong> No desarrolla las competencias digitales del siglo XXI
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Quote -->
+                <div class="mt-6 p-4 bg-coral-50 border-l-4 border-coral-400 rounded-lg italic text-slate-dark/70">
+                  "La tecnología debería ser una herramienta, no una muleta"
+                </div>
+              </div>
             </div>
-            <div class="glass p-8 rounded-card shadow-card">
-              <h3 class="font-display font-bold text-2xl mb-4 text-mint-600">Solución</h3>
-              <p class="text-slate-dark/70">Creador activo con IA</p>
+
+            <!-- FLECHA CONECTORA (solo desktop) -->
+            <div class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+              <div class="flex items-center animate-pulse-soft">
+                <svg class="w-16 h-16 text-mint-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13.75 2a.75.75 0 00-1.5 0v16.19l-3.97-3.97a.75.75 0 00-1.06 1.06l5.25 5.25a.75.75 0 001.06 0l5.25-5.25a.75.75 0 10-1.06-1.06l-3.97 3.97V2z" transform="rotate(-90 12 12)"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- SOLUCIÓN -->
+            <div class="group perspective-1000">
+              <div class="glass p-8 md:p-10 rounded-card shadow-card hover:shadow-lift transition-all duration-500 transform hover:scale-[1.02] relative overflow-hidden">
+                <!-- Borde animado -->
+                <div class="absolute inset-0 border-4 border-mint-400/0 group-hover:border-mint-400/30 rounded-card transition-all duration-500"></div>
+
+                <!-- Icono -->
+                <div class="w-20 h-20 bg-mint-100 rounded-2xl mb-6 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <svg class="w-12 h-12 text-mint-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+
+                <!-- Título -->
+                <h3 class="font-display font-bold text-3xl mb-4 text-mint-600 text-center">
+                  🚀 Nuestra Solución
+                </h3>
+
+                <!-- Badge -->
+                <div class="inline-block bg-mint-100 text-mint-700 px-4 py-1 rounded-full text-sm font-semibold mb-6 mx-auto block text-center">
+                  Metodología ialogía
+                </div>
+
+                <!-- Contenido -->
+                <div class="space-y-4 text-left">
+                  <div class="flex items-start space-x-3">
+                    <span class="text-mint-500 mt-1 flex-shrink-0">✅</span>
+                    <p class="text-slate-dark/80">
+                      <strong>Creador activo:</strong> Usa la IA como asistente inteligente para investigar, crear y aprender
+                    </p>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-mint-500 mt-1 flex-shrink-0">✅</span>
+                    <p class="text-slate-dark/80">
+                      <strong>Autonomía digital:</strong> Desarrolla pensamiento crítico y capacidad de análisis profundo
+                    </p>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-mint-500 mt-1 flex-shrink-0">✅</span>
+                    <p class="text-slate-dark/80">
+                      <strong>Metacognición avanzada:</strong> Aprende a formular preguntas efectivas y verificar fuentes
+                    </p>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-mint-500 mt-1 flex-shrink-0">✅</span>
+                    <p class="text-slate-dark/80">
+                      <strong>Competencias del futuro:</strong> Domina las habilidades digitales esenciales del siglo XXI
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Quote -->
+                <div class="mt-6 p-4 bg-mint-50 border-l-4 border-mint-400 rounded-lg italic text-slate-dark/70">
+                  "La IA es un multiplicador de esfuerzo, no un sustituto del pensamiento"
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Estadística impactante -->
+          <div class="mt-16 text-center">
+            <div class="inline-block bg-gradient-mint-coral text-white px-8 py-6 rounded-card shadow-lift">
+              <p class="text-lg font-semibold mb-2">Nuestros estudiantes:</p>
+              <p class="text-4xl font-display font-bold">+300% </p>
+              <p class="text-sm opacity-90">mejora en competencias digitales y rendimiento académico</p>
             </div>
           </div>
         </div>
@@ -624,9 +763,9 @@
           <p class="text-xl md:text-2xl mb-8 text-white/90">
             Plazas limitadas para el programa 2026. Desarrollo y autonomía garantizados.
           </p>
-          <!-- Formulario de Inscripción -->
+          <!-- Formulario de Contacto -->
           <div class="bg-white/10 backdrop-blur-lg p-8 md:p-12 rounded-card shadow-lift">
-            <p class="text-white font-display font-semibold text-2xl mb-2">Formulario de Inscripción</p>
+            <p class="text-white font-display font-semibold text-2xl mb-2">Formulario de Contacto</p>
             <p class="text-white/80 mb-8">Complete el formulario y nos pondremos en contacto con usted</p>
 
             <!-- Mensaje de éxito/error (oculto por defecto) -->
@@ -674,13 +813,12 @@
                 <!-- Teléfono -->
                 <div>
                   <label for="phone" class="block text-white font-medium mb-2">
-                    Teléfono <span class="text-coral-300">*</span>
+                    Teléfono <span class="text-white/60 text-sm">(Opcional)</span>
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    required
                     pattern="[0-9+\s\-()]+"
                     minlength="9"
                     maxlength="20"
@@ -692,12 +830,11 @@
                 <!-- Edad del estudiante -->
                 <div>
                   <label for="student_age" class="block text-white font-medium mb-2">
-                    Edad del Estudiante <span class="text-coral-300">*</span>
+                    Edad del Estudiante <span class="text-white/60 text-sm">(Opcional)</span>
                   </label>
                   <select
                     id="student_age"
                     name="student_age"
-                    required
                     class="w-full px-4 py-3 bg-white/90 border-2 border-white/20 rounded-lg text-slate-dark focus:outline-none focus:ring-2 focus:ring-mint-400 focus:border-transparent transition-all"
                   >
                     <option value="">Selecciona edad...</option>
@@ -715,13 +852,12 @@
               <!-- Nombre del estudiante -->
               <div>
                 <label for="student_name" class="block text-white font-medium mb-2">
-                  Nombre del Estudiante <span class="text-coral-300">*</span>
+                  Nombre del Estudiante <span class="text-white/60 text-sm">(Opcional)</span>
                 </label>
                 <input
                   type="text"
                   id="student_name"
                   name="student_name"
-                  required
                   minlength="2"
                   maxlength="100"
                   class="w-full px-4 py-3 bg-white/90 border-2 border-white/20 rounded-lg text-slate-dark placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-mint-400 focus:border-transparent transition-all"
