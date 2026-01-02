@@ -554,50 +554,416 @@
     </section>
 
     <!-- Características y Pedagogía Única -->
-    <section id="caracteristicas" class="py-20 bg-cream">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="caracteristicas" class="py-20 bg-cream relative overflow-hidden">
+      <!-- Background decorative -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-mint-200/30 to-coral-200/30 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-sky-soft-200/30 to-purple-200/30 rounded-full blur-3xl"></div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Header -->
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2 class="font-display font-bold text-4xl md:text-5xl text-slate-dark mb-6">
             Nuestra Pedagogía <span class="gradient-text">Única</span>
           </h2>
-          <p class="text-lg text-slate-dark/70">Sección: Características y Pedagogía</p>
+          <p class="text-xl text-slate-dark/80 leading-relaxed">
+            Tres pilares fundamentales que garantizan un aprendizaje profundo, transferible y adaptado a cada estudiante
+          </p>
         </div>
-        <!-- Cards de características -->
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- APB - Aprendizaje Basado en Proyectos -->
-          <div class="glass p-8 rounded-card shadow-card hover:shadow-lift transition-all duration-300 group">
-            <div class="w-16 h-16 bg-mint-400 rounded-2xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-              </svg>
-            </div>
-            <h3 class="font-display font-bold text-xl mb-3 text-mint-600">APB</h3>
-            <p class="text-slate-dark/70">Aprendizaje Basado en Proyectos</p>
-          </div>
 
-          <!-- Tool-agnostic -->
-          <div class="glass p-8 rounded-card shadow-card hover:shadow-lift transition-all duration-300 group">
-            <div class="w-16 h-16 bg-coral-400 rounded-2xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
+        <!-- Pilar 1: APB - Aprendizaje Basado en Proyectos -->
+        <div class="mb-20">
+          <div class="max-w-6xl mx-auto">
+            <!-- Header del pilar -->
+            <div class="flex items-center justify-center mb-8">
+              <div class="w-20 h-20 bg-gradient-to-br from-mint-400 to-mint-500 rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
             </div>
-            <h3 class="font-display font-bold text-xl mb-3 text-coral-500">Tool-agnostic</h3>
-            <p class="text-slate-dark/70">Enfoque en habilidades, no herramientas</p>
-          </div>
+            <h3 class="font-display font-bold text-3xl text-center text-slate-dark mb-4">
+              <span class="text-mint-600">APB</span> - Aprendizaje Basado en Proyectos
+            </h3>
+            <p class="text-center text-slate-dark/70 mb-12 max-w-2xl mx-auto">
+              Los estudiantes aprenden haciendo, creando proyectos reales que resuelven problemas concretos
+            </p>
 
-          <!-- Escalable -->
-          <div class="glass p-8 rounded-card shadow-card hover:shadow-lift transition-all duration-300 group">
-            <div class="w-16 h-16 bg-sky-soft-300 rounded-2xl mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
+            <!-- Contenido APB -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <!-- Metodología -->
+              <div class="glass p-8 rounded-card shadow-card">
+                <h4 class="font-display font-bold text-xl text-slate-dark mb-4 flex items-center">
+                  <span class="w-8 h-8 bg-mint-100 rounded-full flex items-center justify-center text-mint-600 mr-3">1</span>
+                  Metodología de Proyectos
+                </h4>
+                <div class="space-y-3">
+                  <div class="flex items-start space-x-3">
+                    <span class="text-mint-500 mt-1">▸</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark text-sm">Identificar un problema o desafío real</p>
+                      <p class="text-xs text-slate-dark/60">Conectar con intereses personales del estudiante</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-mint-500 mt-1">▸</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark text-sm">Investigar y planificar</p>
+                      <p class="text-xs text-slate-dark/60">Usar IA para explorar soluciones y recursos</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-mint-500 mt-1">▸</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark text-sm">Crear y prototipar</p>
+                      <p class="text-xs text-slate-dark/60">Iterar con feedback de IA y mentores</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-mint-500 mt-1">▸</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark text-sm">Presentar y reflexionar</p>
+                      <p class="text-xs text-slate-dark/60">Compartir resultados y aprendizajes</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- APB vs Tradicional -->
+              <div class="glass p-8 rounded-card shadow-card border-l-4 border-mint-400">
+                <h4 class="font-display font-bold text-xl text-slate-dark mb-4">
+                  APB vs. Aprendizaje Tradicional
+                </h4>
+                <div class="space-y-4">
+                  <div class="bg-coral-50 p-3 rounded-lg">
+                    <p class="text-xs font-semibold text-coral-800 mb-1">❌ Tradicional:</p>
+                    <p class="text-sm text-slate-dark/70">"Memoriza estos 10 prompts de ChatGPT"</p>
+                  </div>
+                  <div class="bg-mint-50 p-3 rounded-lg">
+                    <p class="text-xs font-semibold text-mint-800 mb-1">✅ APB en ialogía:</p>
+                    <p class="text-sm text-slate-dark/70">"Crea un cuento ilustrado sobre tu ciudad usando IA generativa"</p>
+                  </div>
+                  <div class="mt-4 pt-4 border-t border-slate-dark/10">
+                    <p class="text-sm text-slate-dark/80">
+                      <strong>Resultado:</strong> El estudiante aprende prompting, creatividad narrativa,
+                      edición de imágenes IA, y storytelling visual... todo en un proyecto significativo.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 class="font-display font-bold text-xl mb-3 text-sky-soft-600">Escalable</h3>
-            <p class="text-slate-dark/70">Por edad y nivel</p>
+
+            <!-- Ejemplos de Proyectos por Trimestre -->
+            <div class="glass p-8 rounded-card shadow-card">
+              <h4 class="font-display font-bold text-xl text-slate-dark mb-6 text-center">
+                Ejemplos de Proyectos por Trimestre
+              </h4>
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-mint-50 p-5 rounded-lg">
+                  <div class="flex items-center space-x-2 mb-3">
+                    <span class="w-8 h-8 bg-mint-500 text-white rounded-full flex items-center justify-center font-bold text-sm">T1</span>
+                    <p class="font-semibold text-slate-dark text-sm">Sep - Dic</p>
+                  </div>
+                  <p class="text-sm font-bold text-mint-700 mb-2">📚 "Mi Historia Ilustrada"</p>
+                  <p class="text-xs text-slate-dark/70">
+                    Cuento personalizado con ilustraciones generadas por IA.
+                    Aprenden: prompting creativo, edición, narrativa.
+                  </p>
+                </div>
+
+                <div class="bg-coral-50 p-5 rounded-lg">
+                  <div class="flex items-center space-x-2 mb-3">
+                    <span class="w-8 h-8 bg-coral-500 text-white rounded-full flex items-center justify-center font-bold text-sm">T2</span>
+                    <p class="font-semibold text-slate-dark text-sm">Ene - Mar</p>
+                  </div>
+                  <p class="text-sm font-bold text-coral-700 mb-2">🎥 "Mi Canal Educativo"</p>
+                  <p class="text-xs text-slate-dark/70">
+                    Video explicativo sobre un tema de su interés con guion asistido por IA.
+                    Aprenden: investigación, síntesis, producción audiovisual.
+                  </p>
+                </div>
+
+                <div class="bg-sky-soft-50 p-5 rounded-lg">
+                  <div class="flex items-center space-x-2 mb-3">
+                    <span class="w-8 h-8 bg-sky-soft-500 text-white rounded-full flex items-center justify-center font-bold text-sm">T3</span>
+                    <p class="font-semibold text-slate-dark text-sm">Abr - Jun</p>
+                  </div>
+                  <p class="text-sm font-bold text-sky-soft-700 mb-2">🌍 "Mi Proyecto Social"</p>
+                  <p class="text-xs text-slate-dark/70">
+                    Campaña de concienciación sobre un problema local con web y contenido generado con IA.
+                    Aprenden: investigación social, diseño web, impacto.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Pilar 2: Tool-agnostic - Herramientas Transferibles -->
+        <div class="mb-20">
+          <div class="max-w-6xl mx-auto">
+            <!-- Header del pilar -->
+            <div class="flex items-center justify-center mb-8">
+              <div class="w-20 h-20 bg-gradient-to-br from-coral-400 to-coral-500 rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="font-display font-bold text-3xl text-center text-slate-dark mb-4">
+              <span class="text-coral-600">Tool-agnostic</span> - Habilidades Transferibles
+            </h3>
+            <p class="text-center text-slate-dark/70 mb-12 max-w-2xl mx-auto">
+              No enseñamos herramientas específicas, enseñamos a <strong>aprender cualquier herramienta</strong>
+            </p>
+
+            <!-- Contenido Tool-agnostic -->
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+              <!-- Filosofía -->
+              <div class="glass p-8 rounded-card shadow-card border-l-4 border-coral-400">
+                <h4 class="font-display font-bold text-xl text-slate-dark mb-4">
+                  ¿Por qué no enseñamos herramientas?
+                </h4>
+                <div class="space-y-4">
+                  <div class="flex items-start space-x-3">
+                    <span class="text-coral-500 text-xl">⚡</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark text-sm mb-1">Las herramientas cambian constantemente</p>
+                      <p class="text-xs text-slate-dark/60">
+                        ChatGPT, Midjourney, Runway... Hoy dominan, mañana pueden ser reemplazadas
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-coral-500 text-xl">🧠</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark text-sm mb-1">Las habilidades son permanentes</p>
+                      <p class="text-xs text-slate-dark/60">
+                        Pensamiento crítico, creatividad, resolución de problemas... nunca caducan
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <span class="text-coral-500 text-xl">🔄</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark text-sm mb-1">Adaptabilidad es clave</p>
+                      <p class="text-xs text-slate-dark/60">
+                        Un estudiante que sabe "aprender a aprender" dominará cualquier herramienta futura
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Habilidades Transferibles -->
+              <div class="glass p-8 rounded-card shadow-card">
+                <h4 class="font-display font-bold text-xl text-slate-dark mb-4">
+                  Habilidades que Desarrollamos
+                </h4>
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="bg-coral-50 p-3 rounded-lg text-center">
+                    <p class="text-2xl mb-1">🎯</p>
+                    <p class="text-xs font-semibold text-slate-dark">Prompting Efectivo</p>
+                  </div>
+                  <div class="bg-coral-50 p-3 rounded-lg text-center">
+                    <p class="text-2xl mb-1">🔍</p>
+                    <p class="text-xs font-semibold text-slate-dark">Investigación</p>
+                  </div>
+                  <div class="bg-coral-50 p-3 rounded-lg text-center">
+                    <p class="text-2xl mb-1">✂️</p>
+                    <p class="text-xs font-semibold text-slate-dark">Síntesis</p>
+                  </div>
+                  <div class="bg-coral-50 p-3 rounded-lg text-center">
+                    <p class="text-2xl mb-1">🎨</p>
+                    <p class="text-xs font-semibold text-slate-dark">Creatividad</p>
+                  </div>
+                  <div class="bg-coral-50 p-3 rounded-lg text-center">
+                    <p class="text-2xl mb-1">🧩</p>
+                    <p class="text-xs font-semibold text-slate-dark">Resolución</p>
+                  </div>
+                  <div class="bg-coral-50 p-3 rounded-lg text-center">
+                    <p class="text-2xl mb-1">💬</p>
+                    <p class="text-xs font-semibold text-slate-dark">Comunicación</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ejemplo de Adaptabilidad -->
+            <div class="glass p-8 rounded-card shadow-card bg-gradient-to-r from-coral-50/50 to-transparent">
+              <h4 class="font-display font-bold text-xl text-slate-dark mb-4 flex items-center">
+                <span class="text-2xl mr-3">💡</span>
+                Ejemplo de Adaptabilidad
+              </h4>
+              <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white/60 p-4 rounded-lg">
+                  <p class="text-xs font-semibold text-coral-600 mb-2">Habilidad enseñada:</p>
+                  <p class="text-sm font-bold text-slate-dark mb-2">"Generar imágenes con prompts descriptivos"</p>
+                  <p class="text-xs text-slate-dark/70">No enseñamos "usar Midjourney"</p>
+                </div>
+                <div class="bg-white/60 p-4 rounded-lg">
+                  <p class="text-xs font-semibold text-coral-600 mb-2">Aplicable a:</p>
+                  <p class="text-xs text-slate-dark/80 space-y-1">
+                    → Midjourney<br>
+                    → DALL-E<br>
+                    → Stable Diffusion<br>
+                    → Firefly<br>
+                    → Cualquier IA futura
+                  </p>
+                </div>
+                <div class="bg-white/60 p-4 rounded-lg">
+                  <p class="text-xs font-semibold text-coral-600 mb-2">Resultado:</p>
+                  <p class="text-sm text-slate-dark/80">
+                    El estudiante puede usar <strong>cualquier herramienta</strong> de generación de imágenes
+                    con la misma efectividad
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pilar 3: Escalabilidad y Adaptación -->
+        <div class="mb-8">
+          <div class="max-w-6xl mx-auto">
+            <!-- Header del pilar -->
+            <div class="flex items-center justify-center mb-8">
+              <div class="w-20 h-20 bg-gradient-to-br from-sky-soft-400 to-sky-soft-500 rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-12 h-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="font-display font-bold text-3xl text-center text-slate-dark mb-4">
+              <span class="text-sky-soft-600">Escalabilidad</span> y Adaptación
+            </h3>
+            <p class="text-center text-slate-dark/70 mb-12 max-w-2xl mx-auto">
+              Cada estudiante avanza a su propio ritmo, con niveles adaptados a su edad y experiencia
+            </p>
+
+            <!-- Contenido Escalabilidad -->
+            <div class="space-y-8">
+              <!-- Niveles por Edad -->
+              <div class="grid md:grid-cols-2 gap-8">
+                <!-- 10-12 años -->
+                <div class="glass p-8 rounded-card shadow-card border-l-4 border-sky-soft-400">
+                  <div class="flex items-center space-x-3 mb-4">
+                    <span class="w-12 h-12 bg-sky-soft-100 rounded-full flex items-center justify-center text-2xl">👶</span>
+                    <div>
+                      <h4 class="font-display font-bold text-xl text-slate-dark">Nivel Base (10-12 años)</h4>
+                      <p class="text-sm text-slate-dark/60">Fundamentos y creatividad</p>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex items-start space-x-2">
+                      <span class="text-sky-soft-500 mt-1">→</span>
+                      <p class="text-sm text-slate-dark/80">
+                        <strong>Enfoque:</strong> Exploración lúdica y proyectos creativos
+                      </p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                      <span class="text-sky-soft-500 mt-1">→</span>
+                      <p class="text-sm text-slate-dark/80">
+                        <strong>Herramientas:</strong> ChatGPT, generadores de imágenes, creación multimedia
+                      </p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                      <span class="text-sky-soft-500 mt-1">→</span>
+                      <p class="text-sm text-slate-dark/80">
+                        <strong>Proyectos:</strong> Cuentos, presentaciones, arte digital, videos
+                      </p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                      <span class="text-sky-soft-500 mt-1">→</span>
+                      <p class="text-sm text-slate-dark/80">
+                        <strong>Objetivo:</strong> Desarrollar confianza y creatividad con IA
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 13-16 años -->
+                <div class="glass p-8 rounded-card shadow-card border-l-4 border-purple-400">
+                  <div class="flex items-center space-x-3 mb-4">
+                    <span class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">🎓</span>
+                    <div>
+                      <h4 class="font-display font-bold text-xl text-slate-dark">Nivel Avanzado (13-16 años)</h4>
+                      <p class="text-sm text-slate-dark/60">Investigación y producción</p>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex items-start space-x-2">
+                      <span class="text-purple-500 mt-1">→</span>
+                      <p class="text-sm text-slate-dark/80">
+                        <strong>Enfoque:</strong> Investigación académica y producción profesional
+                      </p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                      <span class="text-purple-500 mt-1">→</span>
+                      <p class="text-sm text-slate-dark/80">
+                        <strong>Herramientas:</strong> + NotebookLM para organización de fuentes
+                      </p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                      <span class="text-purple-500 mt-1">→</span>
+                      <p class="text-sm text-slate-dark/80">
+                        <strong>Proyectos:</strong> Investigaciones, documentales, campañas sociales, portfolios
+                      </p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                      <span class="text-purple-500 mt-1">→</span>
+                      <p class="text-sm text-slate-dark/80">
+                        <strong>Objetivo:</strong> Preparación para universidad y mundo profesional
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Personalización y Progresión -->
+              <div class="glass p-8 rounded-card shadow-card">
+                <h4 class="font-display font-bold text-xl text-slate-dark mb-6 text-center">
+                  Personalización y Ritmo Individual
+                </h4>
+                <div class="grid md:grid-cols-3 gap-6">
+                  <div class="bg-sky-soft-50 p-5 rounded-lg text-center">
+                    <span class="text-3xl mb-3 block">🎯</span>
+                    <p class="font-semibold text-slate-dark mb-2 text-sm">Evaluación Inicial</p>
+                    <p class="text-xs text-slate-dark/70">
+                      Identificamos el nivel de cada estudiante para adaptar la dificultad desde el inicio
+                    </p>
+                  </div>
+                  <div class="bg-sky-soft-50 p-5 rounded-lg text-center">
+                    <span class="text-3xl mb-3 block">📊</span>
+                    <p class="font-semibold text-slate-dark mb-2 text-sm">Progresión Adaptativa</p>
+                    <p class="text-xs text-slate-dark/70">
+                      Los proyectos aumentan en complejidad según el dominio demostrado por cada estudiante
+                    </p>
+                  </div>
+                  <div class="bg-sky-soft-50 p-5 rounded-lg text-center">
+                    <span class="text-3xl mb-3 block">🤝</span>
+                    <p class="font-semibold text-slate-dark mb-2 text-sm">Mentoría Personalizada</p>
+                    <p class="text-xs text-slate-dark/70">
+                      Acompañamiento individualizado para garantizar que nadie se quede atrás
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Flexibilidad -->
+              <div class="glass p-6 rounded-card bg-gradient-to-r from-sky-soft-50/50 to-mint-50/50 border-2 border-sky-soft-200">
+                <div class="flex items-center justify-center space-x-3">
+                  <span class="text-3xl">🌟</span>
+                  <p class="text-slate-dark/80 font-medium text-center">
+                    <strong>Resultado:</strong> Un programa que crece con cada estudiante,
+                    respetando sus tiempos y maximizando su potencial único
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
