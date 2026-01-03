@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Docentes - Formación en IA Educativa | ialogía</title>
+  <meta name="title" content="Docentes - Formación en IA Educativa | ialogía">
+  <meta name="description" content="Capacitación técnica y pedagógica para integrar la IA en tu aula sin perder el enfoque crítico y humano que define a un gran educador.">
+  <meta name="keywords" content="ialogía, formación docente, IA educativa, capacitación profesores, inteligencia artificial, pedagogía">
+  <meta name="author" content="ialogía - Academia de Habilidades Digitales con IA">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://academia-ia.com/docentes">
+  <meta property="og:title" content="Docentes - Formación en IA Educativa | ialogía">
+  <meta property="og:description" content="Lidera el cambio educativo con capacitación técnica y pedagógica de alto nivel en IA">
+  <meta property="og:image" content="/assets/images/og-image-docentes.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://academia-ia.com/docentes">
+  <meta property="twitter:title" content="Docentes - Formación en IA Educativa | ialogía">
+  <meta property="twitter:description" content="Lidera el cambio educativo con capacitación técnica y pedagógica de alto nivel en IA">
+  <meta property="twitter:image" content="/assets/images/og-image-docentes.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Paleta principal basada en la infografía
+            'mint': {
+              50: '#f0fdf9',
+              100: '#ccfbef',
+              200: '#99f6e0',
+              300: '#5fe9ce',
+              400: '#7DD3C0', // Color principal de la infografía
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            'coral': {
+              50: '#fff5f3',
+              100: '#ffe9e5',
+              200: '#ffd6cf',
+              300: '#ffb8ac',
+              400: '#FF8B7B', // Acento coral de la infografía
+              500: '#f97066',
+              600: '#e5503f',
+              700: '#c13f2f',
+              800: '#a0362a',
+              900: '#843228',
+            },
+            'sky-soft': {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#A8D8EA', // Azul cielo suave
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            'sunshine': {
+              50: '#fffef7',
+              100: '#fffbeb',
+              200: '#fef3c7',
+              300: '#FFD97D', // Amarillo pastel
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            'cream': '#FAFBF8',
+            'slate-dark': '#2C3E50',
+          },
+          fontFamily: {
+            'display': ['Poppins', 'sans-serif'],
+            'body': ['Inter', 'system-ui', 'sans-serif'],
+          },
+          fontSize: {
+            'hero': ['3.5rem', { lineHeight: '1.1', fontWeight: '700' }],
+            'hero-mobile': ['2.5rem', { lineHeight: '1.2', fontWeight: '700' }],
+          },
+          borderRadius: {
+            'card': '1.5rem',
+            'button': '0.75rem',
+          },
+          boxShadow: {
+            'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+            'card': '0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            'lift': '0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 8px 12px -4px rgba(0, 0, 0, 0.08)',
+            'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+          },
+          backgroundImage: {
+            'gradient-mint-coral': 'linear-gradient(135deg, #7DD3C0 0%, #FF8B7B 100%)',
+            'gradient-sky-mint': 'linear-gradient(135deg, #A8D8EA 0%, #7DD3C0 100%)',
+            'gradient-sunshine-coral': 'linear-gradient(135deg, #FFD97D 0%, #FF8B7B 100%)',
+            'gradient-coral': 'linear-gradient(135deg, #FF8B7B 0%, #e5503f 100%)',
+            'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+            'mesh-gradient': `
+              radial-gradient(at 40% 20%, rgba(125, 211, 192, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 0%, rgba(168, 216, 234, 0.3) 0px, transparent 50%),
+              radial-gradient(at 0% 50%, rgba(255, 139, 123, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 50%, rgba(255, 217, 125, 0.3) 0px, transparent 50%),
+              radial-gradient(at 0% 100%, rgba(168, 216, 234, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 100%, rgba(125, 211, 192, 0.3) 0px, transparent 50%)
+            `,
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'slide-up': 'slideUp 0.6s ease-out',
+            'slide-in-left': 'slideInLeft 0.6s ease-out',
+            'slide-in-right': 'slideInRight 0.6s ease-out',
+            'scale-in': 'scaleIn 0.5s ease-out',
+            'pulse-soft': 'pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 3s ease-in-out infinite',
+            'gradient-shift': 'gradientShift 8s ease infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideInLeft: {
+              '0%': { transform: 'translateX(-30px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            slideInRight: {
+              '0%': { transform: 'translateX(30px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0.95)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.8' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            gradientShift: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+          },
+        },
+      },
+      plugins: [],
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Glassmorphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #FF8B7B 0%, #e5503f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Animated gradient background */
+    .animated-gradient {
+      background-size: 200% 200%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    /* Mobile menu transition */
+    .mobile-menu {
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* Accordion styles */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .accordion-content.active {
+      max-height: 1000px;
+      transition: max-height 0.5s ease-in;
+    }
+  </style>
+</head>
+
+<body class="bg-cream text-slate-dark antialiased">
+  <!-- Skip to main content (Accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-coral-400 text-white px-4 py-2 rounded-button z-50">
+    Saltar al contenido principal
+  </a>
+
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <div id="top"></div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-gradient-coral">
+      <!-- Decorative elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-coral-300 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-sunshine-300 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-coral-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-float" style="animation-delay: 2s;"></div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-5xl mx-auto text-center">
+          <!-- Badge -->
+          <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white text-sm font-medium mb-8 animate-fade-in">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            Formación Profesional Certificada
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 animate-slide-up">
+            Docentes: Los Guías del<br class="hidden md:block">Cambio Educativo
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide-up" style="animation-delay: 0.1s;">
+            Capacitación técnica y pedagógica para integrar la IA en tu aula sin perder el enfoque crítico y humano que define a un gran educador.
+          </p>
+
+          <!-- CTA Button -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in" style="animation-delay: 0.2s;">
+            <a href="#programa" class="inline-flex items-center justify-center px-8 py-4 bg-white text-coral-600 font-semibold rounded-button shadow-lift hover:shadow-xl hover:scale-105 transition-all duration-300">
+              Explorar Formación Docente
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- El Problema Docente -->
+    <section class="py-20 bg-cream">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-dark mb-6">
+              ¿Te Suena Familiar?
+            </h2>
+          </div>
+
+          <!-- Pain Points Grid -->
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- Pain Point 1 -->
+            <div class="glass p-6 rounded-card hover:shadow-lift transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl">❌</span>
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Tus alumnos usan ChatGPT pero no sabes cómo evaluar sus trabajos de forma justa
+                </p>
+              </div>
+            </div>
+
+            <!-- Pain Point 2 -->
+            <div class="glass p-6 rounded-card hover:shadow-lift transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl">❌</span>
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Quieres innovar en tus clases pero no tienes tiempo de investigar todas las herramientas
+                </p>
+              </div>
+            </div>
+
+            <!-- Pain Point 3 -->
+            <div class="glass p-6 rounded-card hover:shadow-lift transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl">❌</span>
+                <p class="text-slate-dark/80 leading-relaxed">
+                  La IA te parece una amenaza para tu rol como educador
+                </p>
+              </div>
+            </div>
+
+            <!-- Pain Point 4 -->
+            <div class="glass p-6 rounded-card hover:shadow-lift transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl">❌</span>
+                <p class="text-slate-dark/80 leading-relaxed">
+                  No sabes qué herramientas son seguras y apropiadas para el aula
+                </p>
+              </div>
+            </div>
+
+            <!-- Pain Point 5 -->
+            <div class="glass p-6 rounded-card hover:shadow-lift transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl">❌</span>
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Sientes que la tecnología avanza más rápido que tu capacitación
+                </p>
+              </div>
+            </div>
+
+            <!-- Pain Point 6 -->
+            <div class="glass p-6 rounded-card hover:shadow-lift transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl">❌</span>
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Te preocupa que los alumnos hagan trampa sin que puedas detectarlo
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transition -->
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl text-slate-dark/70 leading-relaxed">
+              No estás solo. Miles de docentes enfrentan estos mismos desafíos. En <span class="font-semibold text-coral-600">ialogía</span>, te acompañamos a convertir estos retos en oportunidades.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestra Solución -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-dark mb-6">
+              En ialogía, te acompañamos para
+            </h2>
+          </div>
+
+          <!-- Pilares Grid -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Pilar 1 -->
+            <div class="relative p-8 bg-cream rounded-card border-2 border-coral-400 hover:shadow-lift transition-all duration-300 group">
+              <div class="absolute -top-4 -left-4 w-12 h-12 bg-coral-400 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">
+                1
+              </div>
+              <h3 class="text-2xl font-display font-bold text-slate-dark mb-4 mt-2">
+                DOMINAR LAS HERRAMIENTAS
+              </h3>
+              <p class="text-slate-dark/70 leading-relaxed">
+                Aprende a usar IA generativa aplicada específicamente a tu materia, con ejemplos prácticos y casos de uso reales.
+              </p>
+            </div>
+
+            <!-- Pilar 2 -->
+            <div class="relative p-8 bg-cream rounded-card border-2 border-coral-400 hover:shadow-lift transition-all duration-300 group">
+              <div class="absolute -top-4 -left-4 w-12 h-12 bg-coral-400 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">
+                2
+              </div>
+              <h3 class="text-2xl font-display font-bold text-slate-dark mb-4 mt-2">
+                DISEÑAR Y EVALUAR
+              </h3>
+              <p class="text-slate-dark/70 leading-relaxed">
+                Crea actividades innovadoras y desarrolla rúbricas justas para evaluar trabajos realizados con asistencia de IA.
+              </p>
+            </div>
+
+            <!-- Pilar 3 -->
+            <div class="relative p-8 bg-cream rounded-card border-2 border-coral-400 hover:shadow-lift transition-all duration-300 group">
+              <div class="absolute -top-4 -left-4 w-12 h-12 bg-coral-400 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">
+                3
+              </div>
+              <h3 class="text-2xl font-display font-bold text-slate-dark mb-4 mt-2">
+                MANTENER EL PENSAMIENTO CRÍTICO
+              </h3>
+              <p class="text-slate-dark/70 leading-relaxed">
+                Fomenta que los alumnos cuestionen, verifiquen y reflexionen, usando la IA como socio, no como sustituto del pensamiento.
+              </p>
+            </div>
+
+            <!-- Pilar 4 -->
+            <div class="relative p-8 bg-cream rounded-card border-2 border-coral-400 hover:shadow-lift transition-all duration-300 group">
+              <div class="absolute -top-4 -left-4 w-12 h-12 bg-coral-400 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">
+                4
+              </div>
+              <h3 class="text-2xl font-display font-bold text-slate-dark mb-4 mt-2">
+                LIDERAR EL CAMBIO
+              </h3>
+              <p class="text-slate-dark/70 leading-relaxed">
+                Conviértete en referente de innovación educativa en tu centro, sin perder la esencia humana de la enseñanza.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programa de Formación -->
+    <section id="programa" class="py-20 bg-cream">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-dark mb-6">
+              Ruta de Capacitación Docente
+            </h2>
+            <div class="inline-flex items-center px-4 py-2 bg-coral-400 text-white rounded-full text-sm font-semibold">
+              <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              Certificación Profesional
+            </div>
+          </div>
+
+          <!-- Módulos -->
+          <div class="space-y-6 mb-12">
+            <!-- Módulo 1 -->
+            <div class="bg-white rounded-card shadow-card overflow-hidden">
+              <div class="p-6 md:p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold text-coral-600 mb-2 md:mb-0">
+                    Módulo 1: Fundamentos de IA para Educadores
+                  </h3>
+                  <span class="inline-flex items-center px-3 py-1 bg-coral-100 text-coral-700 rounded-full text-sm font-semibold">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    4 horas
+                  </span>
+                </div>
+                <ul class="space-y-2 text-slate-dark/70 mb-4">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Qué es la IA generativa y cómo funciona (sin tecnicismos)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Herramientas clave: ChatGPT, Gemini, Claude, DALL-E</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Prompting efectivo para preparar clases y materiales</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Ética y limitaciones de la IA</span>
+                  </li>
+                </ul>
+                <div class="inline-flex items-center px-3 py-1.5 bg-coral-50 text-coral-700 rounded-lg text-sm font-medium">
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  Entregable: Banco personal de prompts educativos
+                </div>
+              </div>
+            </div>
+
+            <!-- Módulo 2 -->
+            <div class="bg-white rounded-card shadow-card overflow-hidden">
+              <div class="p-6 md:p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold text-coral-600 mb-2 md:mb-0">
+                    Módulo 2: IA Aplicada a Tu Materia
+                  </h3>
+                  <span class="inline-flex items-center px-3 py-1 bg-coral-100 text-coral-700 rounded-full text-sm font-semibold">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    6 horas
+                  </span>
+                </div>
+                <ul class="space-y-2 text-slate-dark/70 mb-4">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Talleres específicos por asignatura:</span>
+                  </li>
+                  <li class="ml-8 text-sm">Lengua y Literatura: Análisis de textos, generación creativa</li>
+                  <li class="ml-8 text-sm">Matemáticas: Visualización de conceptos, problemas adaptativos</li>
+                  <li class="ml-8 text-sm">Ciencias: Simulaciones, explicaciones multimodales</li>
+                  <li class="ml-8 text-sm">Historia: Líneas de tiempo, análisis de fuentes</li>
+                  <li class="ml-8 text-sm">Idiomas: Conversación, corrección, vocabulario</li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Casos de uso prácticos y replicables</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Co-creación de actividades con IA</span>
+                  </li>
+                </ul>
+                <div class="inline-flex items-center px-3 py-1.5 bg-coral-50 text-coral-700 rounded-lg text-sm font-medium">
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  Entregable: 3 actividades listas para tu aula
+                </div>
+              </div>
+            </div>
+
+            <!-- Módulo 3 -->
+            <div class="bg-white rounded-card shadow-card overflow-hidden">
+              <div class="p-6 md:p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold text-coral-600 mb-2 md:mb-0">
+                    Módulo 3: Evaluación y Pensamiento Crítico
+                  </h3>
+                  <span class="inline-flex items-center px-3 py-1 bg-coral-100 text-coral-700 rounded-full text-sm font-semibold">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    5 horas
+                  </span>
+                </div>
+                <ul class="space-y-2 text-slate-dark/70 mb-4">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Cómo detectar uso inadecuado de IA</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Diseñar rúbricas adaptadas a la era de la IA</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Fomentar la verificación y el cuestionamiento</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Evaluación por competencias vs. contenidos</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Herramientas de detección (y sus limitaciones)</span>
+                  </li>
+                </ul>
+                <div class="inline-flex items-center px-3 py-1.5 bg-coral-50 text-coral-700 rounded-lg text-sm font-medium">
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  Entregable: Rúbrica de evaluación personalizada
+                </div>
+              </div>
+            </div>
+
+            <!-- Módulo 4 -->
+            <div class="bg-white rounded-card shadow-card overflow-hidden">
+              <div class="p-6 md:p-8">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 class="text-2xl font-display font-bold text-coral-600 mb-2 md:mb-0">
+                    Módulo 4: Creación de Contenidos Multimedia
+                  </h3>
+                  <span class="inline-flex items-center px-3 py-1 bg-coral-100 text-coral-700 rounded-full text-sm font-semibold">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    5 horas
+                  </span>
+                </div>
+                <ul class="space-y-2 text-slate-dark/70 mb-4">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Presentaciones impactantes con IA</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Generación de imágenes educativas (DALL-E, Canva)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Creación de videos explicativos (Runway, Synthesia)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Cuestionarios y tests adaptativos</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-coral-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Recursos interactivos (NotebookLM, Kahoot + IA)</span>
+                  </li>
+                </ul>
+                <div class="inline-flex items-center px-3 py-1.5 bg-coral-50 text-coral-700 rounded-lg text-sm font-medium">
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  Entregable: Kit de materiales multimedia
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyecto Final -->
+          <div class="bg-gradient-coral rounded-card p-8 text-white shadow-lift">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-2xl font-display font-bold mb-3">
+                  Proyecto Final: Unidad Didáctica con IA
+                </h3>
+                <p class="text-white/90 mb-4 leading-relaxed">
+                  Diseña una unidad didáctica completa (2-4 semanas) integrando IA en tu asignatura, desde la planificación hasta la evaluación. Incluye mentoría individual personalizada.
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Duración Total: 20 horas + proyecto
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    Formato: Online en vivo
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    Certificación Incluida
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Herramientas para Docentes -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-dark mb-6">
+              Tu Kit de Herramientas IA
+            </h2>
+          </div>
+
+          <!-- Categorías -->
+          <div class="space-y-12">
+            <!-- Categoría 1: Preparación de Clases -->
+            <div>
+              <h3 class="text-2xl font-display font-bold text-coral-600 mb-6 flex items-center">
+                <span class="text-3xl mr-3">📚</span>
+                Preparación de Clases
+              </h3>
+              <div class="grid md:grid-cols-3 gap-6">
+                <!-- Herramienta 1 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">🎯</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">ChatGPT / Gemini</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Genera esquemas, resúmenes, ejercicios</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Adapta contenidos por nivel</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Crea bancos de preguntas</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Herramienta 2 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">🎨</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">Canva AI / Gamma</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Presentaciones automáticas</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Infografías educativas</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Materiales visuales atractivos</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Herramienta 3 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">📚</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">NotebookLM</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Organiza tus apuntes y recursos</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Genera guías de estudio</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Crea FAQs automáticas</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categoría 2: Evaluación y Feedback -->
+            <div>
+              <h3 class="text-2xl font-display font-bold text-coral-600 mb-6 flex items-center">
+                <span class="text-3xl mr-3">✅</span>
+                Evaluación y Feedback
+              </h3>
+              <div class="grid md:grid-cols-3 gap-6">
+                <!-- Herramienta 1 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">✍️</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">Rúbricas Generadas</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Crea rúbricas detalladas en segundos</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Adapta por competencias</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Incluye descriptores claros</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Herramienta 2 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">📊</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">Análisis de Redacciones</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Feedback inmediato sobre estructura</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Sugerencias de mejora</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Detección de áreas de refuerzo</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Herramienta 3 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">❓</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">Cuestionarios Adaptativos</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Genera tests por tema</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Múltiples formatos</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Niveles de dificultad variables</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categoría 3: Creatividad en el Aula -->
+            <div>
+              <h3 class="text-2xl font-display font-bold text-coral-600 mb-6 flex items-center">
+                <span class="text-3xl mr-3">🎨</span>
+                Creatividad en el Aula
+              </h3>
+              <div class="grid md:grid-cols-3 gap-6">
+                <!-- Herramienta 1 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">🖼️</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">DALL-E 3 / Midjourney</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Ilustra conceptos abstractos</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Crea material visual personalizado</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Actividades de creación artística</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Herramienta 2 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">🎬</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">Runway ML / Synthesia</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Videos explicativos con avatares</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Simulaciones y demostraciones</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Clips cortos para captar atención</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Herramienta 3 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">🎙️</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">ElevenLabs / Speechify</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Audios educativos</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Podcasts de repaso</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Accesibilidad para todos</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Categoría 4: Gestión del Aula -->
+            <div>
+              <h3 class="text-2xl font-display font-bold text-coral-600 mb-6 flex items-center">
+                <span class="text-3xl mr-3">👥</span>
+                Gestión del Aula
+              </h3>
+              <div class="grid md:grid-cols-3 gap-6">
+                <!-- Herramienta 1 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">👥</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">Personalización del Aprendizaje</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Rutas de aprendizaje individualizadas</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Contenido adaptativo por nivel</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Seguimiento de progreso</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Herramienta 2 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">📈</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">Análisis de Datos</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Identifica patrones de dificultad</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Detecta necesidades de refuerzo</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Optimiza tiempo de enseñanza</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Herramienta 3 -->
+                <div class="bg-cream rounded-card p-6 hover:shadow-lift transition-all duration-300 group">
+                  <div class="text-2xl mb-3">📧</div>
+                  <h4 class="font-display font-bold text-slate-dark mb-2">Comunicación con Familias</h4>
+                  <ul class="space-y-1 text-sm text-slate-dark/70">
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Informes automatizados</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Traducciones instantáneas</span>
+                    </li>
+                    <li class="flex items-start">
+                      <span class="mr-2">→</span>
+                      <span>Boletines personalizados</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Metodología Docente -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-dark mb-6">
+              Nuestra Filosofía Pedagógica
+            </h2>
+          </div>
+
+          <!-- Principios -->
+          <div class="space-y-8">
+            <!-- Principio 1 -->
+            <div class="flex items-start gap-6">
+              <div class="flex-shrink-0 w-16 h-16 bg-coral-400 text-white rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+                1
+              </div>
+              <div>
+                <h3 class="text-2xl font-display font-bold text-coral-600 mb-3">
+                  LA IA COMO HERRAMIENTA, NO REEMPLAZO
+                </h3>
+                <p class="text-slate-dark/70 leading-relaxed text-lg">
+                  El profesor sigue siendo el guía del aprendizaje. La IA es un asistente que potencia tu labor, no la sustituye. Tú sigues siendo insustituible.
+                </p>
+              </div>
+            </div>
+
+            <!-- Principio 2 -->
+            <div class="flex items-start gap-6">
+              <div class="flex-shrink-0 w-16 h-16 bg-coral-400 text-white rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+                2
+              </div>
+              <div>
+                <h3 class="text-2xl font-display font-bold text-coral-600 mb-3">
+                  PENSAMIENTO CRÍTICO PRIMERO
+                </h3>
+                <p class="text-slate-dark/70 leading-relaxed text-lg">
+                  Enseñamos a los docentes a fomentar el cuestionamiento. La IA genera contenido, pero el alumno debe verificar, contrastar y reflexionar bajo tu orientación.
+                </p>
+              </div>
+            </div>
+
+            <!-- Principio 3 -->
+            <div class="flex items-start gap-6">
+              <div class="flex-shrink-0 w-16 h-16 bg-coral-400 text-white rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+                3
+              </div>
+              <div>
+                <h3 class="text-2xl font-display font-bold text-coral-600 mb-3">
+                  ÉTICA Y SEGURIDAD
+                </h3>
+                <p class="text-slate-dark/70 leading-relaxed text-lg">
+                  Uso responsable y supervisado de la tecnología. Privacidad de datos, contenido apropiado y límites claros.
+                </p>
+              </div>
+            </div>
+
+            <!-- Principio 4 -->
+            <div class="flex items-start gap-6">
+              <div class="flex-shrink-0 w-16 h-16 bg-coral-400 text-white rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+                4
+              </div>
+              <div>
+                <h3 class="text-2xl font-display font-bold text-coral-600 mb-3">
+                  APRENDIZAJE PRÁCTICO
+                </h3>
+                <p class="text-slate-dark/70 leading-relaxed text-lg">
+                  Nada de teoría abstracta. Talleres hands-on donde creas materiales reales para usar al día siguiente en tu aula.
+                </p>
+              </div>
+            </div>
+
+            <!-- Principio 5 -->
+            <div class="flex items-start gap-6">
+              <div class="flex-shrink-0 w-16 h-16 bg-coral-400 text-white rounded-full flex items-center justify-center text-3xl font-bold shadow-lg">
+                5
+              </div>
+              <div>
+                <h3 class="text-2xl font-display font-bold text-coral-600 mb-3">
+                  COMUNIDAD Y SOPORTE
+                </h3>
+                <p class="text-slate-dark/70 leading-relaxed text-lg">
+                  Acceso a una red de docentes innovadores. Compartimos recursos, dudas y éxitos. No estás solo en este viaje.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formatos y Precios -->
+    <section class="py-20 bg-cream">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-dark mb-6">
+              Opciones de Formación
+            </h2>
+          </div>
+
+          <!-- Pricing Cards -->
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <!-- Taller de Introducción -->
+            <div class="bg-white rounded-card shadow-card overflow-hidden hover:shadow-lift transition-all duration-300">
+              <div class="p-8">
+                <h3 class="text-2xl font-display font-bold text-slate-dark mb-2">
+                  Taller de Introducción
+                </h3>
+                <p class="text-slate-dark/60 mb-6">Ideal para: Primeros pasos</p>
+
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start gap-2">
+                    <span class="text-lg">⏱️</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark">Duración: 4 horas</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-lg">📍</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark">Formato: Online en vivo</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-dark mb-2">📚 Incluye:</p>
+                    <ul class="space-y-1 text-sm text-slate-dark/70">
+                      <li>• Fundamentos de IA educativa</li>
+                      <li>• Herramientas básicas</li>
+                      <li>• Banco de prompts</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="border-t border-slate-dark/10 pt-6 mb-6">
+                  <div class="flex items-baseline">
+                    <span class="text-2xl font-display font-bold text-coral-600">Consultar</span>
+                    <span class="text-slate-dark/60 ml-2">por docente</span>
+                  </div>
+                </div>
+
+                <a href="contacto.html" class="block w-full text-center px-6 py-3 bg-coral-400 text-white font-semibold rounded-button hover:bg-coral-500 hover:shadow-lg transition-all duration-300">
+                  Más Información
+                </a>
+              </div>
+            </div>
+
+            <!-- Curso Completo - Destacado -->
+            <div class="bg-gradient-coral rounded-card shadow-lift overflow-hidden relative transform md:scale-105">
+              <div class="absolute top-4 right-4 bg-sunshine-300 text-slate-dark px-3 py-1 rounded-full text-sm font-bold">
+                ⭐ Más Popular
+              </div>
+              <div class="p-8 text-white">
+                <h3 class="text-2xl font-display font-bold mb-2">
+                  Curso Completo
+                </h3>
+                <p class="text-white/80 mb-6">Ideal para: Transformación total</p>
+
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start gap-2">
+                    <span class="text-lg">⏱️</span>
+                    <div>
+                      <p class="font-semibold">Duración: 20 horas + proyecto</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-lg">📍</span>
+                    <div>
+                      <p class="font-semibold">Formato: Online con mentorías</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="font-semibold mb-2">📚 Incluye:</p>
+                    <ul class="space-y-1 text-sm text-white/90">
+                      <li>• 4 módulos completos</li>
+                      <li>• Proyecto final tutorizado</li>
+                      <li>• Certificación oficial</li>
+                      <li>• Soporte 3 meses</li>
+                      <li>• Acceso a comunidad</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="border-t border-white/20 pt-6 mb-6">
+                  <div class="flex items-baseline">
+                    <span class="text-2xl font-display font-bold">Consultar</span>
+                    <span class="text-white/80 ml-2">por docente</span>
+                  </div>
+                </div>
+
+                <a href="contacto.html" class="block w-full text-center px-6 py-3 bg-white text-coral-600 font-semibold rounded-button hover:bg-cream hover:shadow-xl transition-all duration-300">
+                  Inscribirme Ahora
+                </a>
+              </div>
+            </div>
+
+            <!-- Formación para Centros -->
+            <div class="bg-white rounded-card shadow-card overflow-hidden hover:shadow-lift transition-all duration-300">
+              <div class="p-8">
+                <h3 class="text-2xl font-display font-bold text-slate-dark mb-2">
+                  Formación para Centros
+                </h3>
+                <p class="text-slate-dark/60 mb-6">Ideal para: Claustros completos</p>
+
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start gap-2">
+                    <span class="text-lg">⏱️</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark">Duración: Personalizada</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-lg">📍</span>
+                    <div>
+                      <p class="font-semibold text-slate-dark">Formato: Presencial/Online</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-slate-dark mb-2">📚 Incluye:</p>
+                    <ul class="space-y-1 text-sm text-slate-dark/70">
+                      <li>• Curso adaptado a vuestras necesidades</li>
+                      <li>• Formación in-company</li>
+                      <li>• Seguimiento y mentoría</li>
+                      <li>• Certificación para todo el equipo</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="border-t border-slate-dark/10 pt-6 mb-6">
+                  <div class="flex items-baseline">
+                    <span class="text-2xl font-display font-bold text-coral-600">Consultar</span>
+                    <span class="text-slate-dark/60 ml-2">presupuesto</span>
+                  </div>
+                </div>
+
+                <a href="contacto.html" class="block w-full text-center px-6 py-3 bg-coral-400 text-white font-semibold rounded-button hover:bg-coral-500 hover:shadow-lg transition-all duration-300">
+                  Solicitar Propuesta
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Descuentos y Garantía -->
+          <div class="glass rounded-card p-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-display font-bold text-slate-dark mb-4 flex items-center">
+                  <svg class="w-6 h-6 text-coral-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                    <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+                  </svg>
+                  Descuentos
+                </h3>
+                <ul class="space-y-2 text-slate-dark/70">
+                  <li class="flex items-start">
+                    <span class="text-coral-600 mr-2">•</span>
+                    <span>10% para grupos de 3+ docentes</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-coral-600 mr-2">•</span>
+                    <span>15% para centros educativos (5+ docentes)</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-display font-bold text-slate-dark mb-4 flex items-center">
+                  <svg class="w-6 h-6 text-coral-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Garantía
+                </h3>
+                <p class="text-slate-dark/70 leading-relaxed">
+                  Si no quedas satisfecho en la primera sesión, te devolvemos el 100% del importe.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Docentes -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-slate-dark mb-6">
+              Preguntas Frecuentes
+            </h2>
+          </div>
+
+          <!-- FAQ Items -->
+          <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="bg-cream rounded-card overflow-hidden">
+              <button class="faq-trigger w-full p-6 text-left flex items-start justify-between hover:bg-coral-50 transition-colors duration-300">
+                <div class="flex items-start gap-3 flex-1">
+                  <span class="text-2xl flex-shrink-0">❓</span>
+                  <span class="font-display font-bold text-slate-dark text-lg">¿Necesito conocimientos técnicos previos?</span>
+                </div>
+                <svg class="w-6 h-6 text-coral-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pl-16 text-slate-dark/70">
+                  No. El curso está diseñado para docentes de cualquier nivel. Empezamos desde cero y avanzamos a tu ritmo.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-cream rounded-card overflow-hidden">
+              <button class="faq-trigger w-full p-6 text-left flex items-start justify-between hover:bg-coral-50 transition-colors duration-300">
+                <div class="flex items-start gap-3 flex-1">
+                  <span class="text-2xl flex-shrink-0">❓</span>
+                  <span class="font-display font-bold text-slate-dark text-lg">¿Recibiré certificación?</span>
+                </div>
+                <svg class="w-6 h-6 text-coral-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pl-16 text-slate-dark/70">
+                  Sí. Al completar el curso completo, recibes un Certificado de Formación Docente en IA Educativa que puedes incluir en tu CV.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-cream rounded-card overflow-hidden">
+              <button class="faq-trigger w-full p-6 text-left flex items-start justify-between hover:bg-coral-50 transition-colors duration-300">
+                <div class="flex items-start gap-3 flex-1">
+                  <span class="text-2xl flex-shrink-0">❓</span>
+                  <span class="font-display font-bold text-slate-dark text-lg">¿Puedo aplicarlo a mi asignatura específica?</span>
+                </div>
+                <svg class="w-6 h-6 text-coral-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pl-16 text-slate-dark/70">
+                  Absolutamente. Personalizamos ejemplos y actividades según tu materia: Lengua, Matemáticas, Ciencias, Historia, Idiomas, etc.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-cream rounded-card overflow-hidden">
+              <button class="faq-trigger w-full p-6 text-left flex items-start justify-between hover:bg-coral-50 transition-colors duration-300">
+                <div class="flex items-start gap-3 flex-1">
+                  <span class="text-2xl flex-shrink-0">❓</span>
+                  <span class="font-display font-bold text-slate-dark text-lg">¿Cómo evalúo trabajos hechos con IA?</span>
+                </div>
+                <svg class="w-6 h-6 text-coral-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pl-16 text-slate-dark/70">
+                  Es uno de los pilares del curso. Enseñamos técnicas de evaluación y rúbricas específicas para la era de la IA.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="bg-cream rounded-card overflow-hidden">
+              <button class="faq-trigger w-full p-6 text-left flex items-start justify-between hover:bg-coral-50 transition-colors duration-300">
+                <div class="flex items-start gap-3 flex-1">
+                  <span class="text-2xl flex-shrink-0">❓</span>
+                  <span class="font-display font-bold text-slate-dark text-lg">¿Qué pasa si mi centro no tiene presupuesto?</span>
+                </div>
+                <svg class="w-6 h-6 text-coral-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pl-16 text-slate-dark/70">
+                  Contáctanos para explorar alternativas.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="bg-cream rounded-card overflow-hidden">
+              <button class="faq-trigger w-full p-6 text-left flex items-start justify-between hover:bg-coral-50 transition-colors duration-300">
+                <div class="flex items-start gap-3 flex-1">
+                  <span class="text-2xl flex-shrink-0">❓</span>
+                  <span class="font-display font-bold text-slate-dark text-lg">¿El curso incluye acceso a herramientas de pago?</span>
+                </div>
+                <svg class="w-6 h-6 text-coral-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pl-16 text-slate-dark/70">
+                  Usamos principalmente herramientas gratuitas o con planes free. Para herramientas premium, mostramos cómo obtener trials educativos.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="bg-cream rounded-card overflow-hidden">
+              <button class="faq-trigger w-full p-6 text-left flex items-start justify-between hover:bg-coral-50 transition-colors duration-300">
+                <div class="flex items-start gap-3 flex-1">
+                  <span class="text-2xl flex-shrink-0">❓</span>
+                  <span class="font-display font-bold text-slate-dark text-lg">¿Puedo implementarlo inmediatamente en mi aula?</span>
+                </div>
+                <svg class="w-6 h-6 text-coral-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pl-16 text-slate-dark/70">
+                  Sí. Cada módulo incluye actividades listas para usar. Desde la primera sesión, tendrás recursos aplicables.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="bg-cream rounded-card overflow-hidden">
+              <button class="faq-trigger w-full p-6 text-left flex items-start justify-between hover:bg-coral-50 transition-colors duration-300">
+                <div class="flex items-start gap-3 flex-1">
+                  <span class="text-2xl flex-shrink-0">❓</span>
+                  <span class="font-display font-bold text-slate-dark text-lg">¿Hay soporte después del curso?</span>
+                </div>
+                <svg class="w-6 h-6 text-coral-600 flex-shrink-0 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <div class="px-6 pb-6 pl-16 text-slate-dark/70">
+                  Sí. Incluye 3 meses de soporte vía email/Discord y acceso a la comunidad de docentes ialogía.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="relative py-24 bg-gradient-coral overflow-hidden">
+      <!-- Decorative elements -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+            Lidera el Cambio en Tu Aula
+          </h2>
+          <p class="text-lg md:text-xl text-white/90 mb-4 leading-relaxed max-w-3xl mx-auto">
+            La educación está cambiando. Los docentes que dominen la IA serán los líderes del futuro educativo.
+          </p>
+          <p class="text-xl md:text-2xl font-semibold mb-10">
+            ¿Estás listo para ser uno de ellos?
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="contacto.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-coral-600 font-semibold rounded-button shadow-lift hover:shadow-xl hover:scale-105 transition-all duration-300">
+              Inscribirme en el Curso Completo
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+            </a>
+            <a href="contacto.html" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-semibold rounded-button hover:bg-white/20 transition-all duration-300">
+              Solicitar Info para mi Centro
+            </a>
+          </div>
+
+          <div class="text-white/90">
+            <p class="mb-2">¿Tienes dudas? Agenda una llamada de 15 min (gratis)</p>
+            <a href="contacto.html" class="text-white font-semibold underline hover:text-white/80 transition-colors">
+              Contactar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JavaScript -->
+  <script src="js/components-loader.js"></script>
+  <script src="js/navigation.js"></script>
+
+  <!-- FAQ Accordion Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqTriggers = document.querySelectorAll('.faq-trigger');
+
+      faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const icon = this.querySelector('svg');
+
+          // Toggle active class
+          content.classList.toggle('active');
+          icon.classList.toggle('rotate-180');
+
+          // Close other accordions
+          faqTriggers.forEach(otherTrigger => {
+            if (otherTrigger !== trigger) {
+              const otherContent = otherTrigger.nextElementSibling;
+              const otherIcon = otherTrigger.querySelector('svg');
+              otherContent.classList.remove('active');
+              otherIcon.classList.remove('rotate-180');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
