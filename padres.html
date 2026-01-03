@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Padres - Acompaña a tus hijos en la era digital | ialogía</title>
+  <meta name="title" content="Padres - Acompaña a tus hijos en la era digital | ialogía">
+  <meta name="description" content="Taller para padres sobre IA educativa. Aprende a acompañar a tus hijos con seguridad, ética y confianza en el mundo digital.">
+  <meta name="keywords" content="ialogía, padres, IA educativa, familia, acompañamiento digital, inteligencia artificial, seguridad digital">
+  <meta name="author" content="ialogía - Academia de Habilidades Digitales con IA">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://academia-ia.com/padres">
+  <meta property="og:title" content="Padres - Acompaña a tus hijos en la era digital | ialogía">
+  <meta property="og:description" content="Aprende a guiar a tus hijos en el mundo de la IA con seguridad, ética y confianza">
+  <meta property="og:image" content="/assets/images/og-image-padres.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://academia-ia.com/padres">
+  <meta property="twitter:title" content="Padres - Acompaña a tus hijos en la era digital | ialogía">
+  <meta property="twitter:description" content="Aprende a guiar a tus hijos en el mundo de la IA con seguridad, ética y confianza">
+  <meta property="twitter:image" content="/assets/images/og-image-padres.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Paleta principal basada en la infografía
+            'mint': {
+              50: '#f0fdf9',
+              100: '#ccfbef',
+              200: '#99f6e0',
+              300: '#5fe9ce',
+              400: '#7DD3C0', // Color principal de la infografía
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            'coral': {
+              50: '#fff5f3',
+              100: '#ffe9e5',
+              200: '#ffd6cf',
+              300: '#ffb8ac',
+              400: '#FF8B7B', // Acento coral de la infografía
+              500: '#f97066',
+              600: '#e5503f',
+              700: '#c13f2f',
+              800: '#a0362a',
+              900: '#843228',
+            },
+            'sky-soft': {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#93C5FD', // Azul cielo suave
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            'purple': {
+              50: '#faf5ff',
+              100: '#f3e8ff',
+              200: '#e9d5ff',
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8',
+              900: '#581c87',
+            },
+            'cream': '#FAFBF8',
+            'slate-dark': '#2C3E50',
+          },
+          fontFamily: {
+            'display': ['Poppins', 'sans-serif'],
+            'body': ['Inter', 'system-ui', 'sans-serif'],
+          },
+          fontSize: {
+            'hero': ['3.5rem', { lineHeight: '1.1', fontWeight: '700' }],
+            'hero-mobile': ['2.5rem', { lineHeight: '1.2', fontWeight: '700' }],
+          },
+          borderRadius: {
+            'card': '1.5rem',
+            'button': '0.75rem',
+          },
+          boxShadow: {
+            'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+            'card': '0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+            'lift': '0 20px 40px -10px rgba(0, 0, 0, 0.15), 0 8px 12px -4px rgba(0, 0, 0, 0.08)',
+            'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+          },
+          backgroundImage: {
+            'gradient-mint-coral': 'linear-gradient(135deg, #7DD3C0 0%, #FF8B7B 100%)',
+            'gradient-sky-mint': 'linear-gradient(135deg, #93C5FD 0%, #7DD3C0 100%)',
+            'gradient-sky': 'linear-gradient(135deg, #93C5FD 0%, #0ea5e9 100%)',
+            'gradient-sunshine-coral': 'linear-gradient(135deg, #FFD97D 0%, #FF8B7B 100%)',
+            'gradient-coral': 'linear-gradient(135deg, #FF8B7B 0%, #e5503f 100%)',
+            'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
+            'mesh-gradient': `
+              radial-gradient(at 40% 20%, rgba(125, 211, 192, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 0%, rgba(147, 197, 253, 0.3) 0px, transparent 50%),
+              radial-gradient(at 0% 50%, rgba(255, 139, 123, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 50%, rgba(255, 217, 125, 0.3) 0px, transparent 50%),
+              radial-gradient(at 0% 100%, rgba(147, 197, 253, 0.3) 0px, transparent 50%),
+              radial-gradient(at 80% 100%, rgba(125, 211, 192, 0.3) 0px, transparent 50%)
+            `,
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out',
+            'slide-up': 'slideUp 0.6s ease-out',
+            'slide-in-left': 'slideInLeft 0.6s ease-out',
+            'slide-in-right': 'slideInRight 0.6s ease-out',
+            'scale-in': 'scaleIn 0.5s ease-out',
+            'pulse-soft': 'pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 3s ease-in-out infinite',
+            'gradient-shift': 'gradientShift 8s ease infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            slideInLeft: {
+              '0%': { transform: 'translateX(-30px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            slideInRight: {
+              '0%': { transform: 'translateX(30px)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' },
+            },
+            scaleIn: {
+              '0%': { transform: 'scale(0.9)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.8' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            gradientShift: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .glass-dark {
+      background: rgba(44, 62, 80, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Gradientes animados */
+    .gradient-text {
+      background: linear-gradient(135deg, #93C5FD 0%, #0ea5e9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Smooth scroll offset for fixed navbar */
+    section[id] {
+      scroll-margin-top: 100px;
+    }
+
+    /* Hover effects */
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Badge animations */
+    @keyframes badge-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .badge-pulse {
+      animation: badge-pulse 2s ease-in-out infinite;
+    }
+
+    /* Contrato Familiar - Estilo papel */
+    .paper-style {
+      background: linear-gradient(to bottom, #fefefe 0%, #f8f8f8 100%);
+      font-family: 'Georgia', serif;
+      box-shadow:
+        0 1px 2px rgba(0,0,0,0.07),
+        0 2px 4px rgba(0,0,0,0.07),
+        0 4px 8px rgba(0,0,0,0.07),
+        0 8px 16px rgba(0,0,0,0.07);
+    }
+
+    /* Accordion FAQ */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .faq-answer.active {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-icon.active {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body class="bg-cream font-body text-slate-dark antialiased">
+
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- ============================================
+         HERO PADRES
+         ============================================ -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-sky pt-24 pb-16">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 bg-mesh-gradient opacity-40"></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/30 backdrop-blur-md rounded-full border border-white/40 mb-8 badge-pulse">
+            <span class="text-2xl">👨‍👩‍👧</span>
+            <span class="text-sm font-semibold text-sky-soft-900">Taller para Familias</span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="text-hero-mobile md:text-hero font-display text-white mb-6 animate-fade-in leading-tight">
+            Padres: Los Mentores en la Era Digital
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-xl md:text-2xl text-sky-soft-50 mb-10 max-w-3xl mx-auto animate-slide-up leading-relaxed">
+            Acompaña a tus hijos en el mundo de la IA con seguridad, ética y confianza.
+            Cierra la brecha generacional tecnológica y convierte la tecnología en un puente familiar.
+          </p>
+
+          <!-- CTA Button -->
+          <div class="animate-scale-in">
+            <a href="#solucion" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-sky-soft-600 font-semibold rounded-button hover:bg-sky-soft-50 hover:scale-105 transition-all duration-300 shadow-lift">
+              <span>Descubrir Cómo Ayudar</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Wave decoration -->
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+          <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z" fill="#FAFBF8"/>
+        </svg>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         PREOCUPACIONES COMUNES
+         ============================================ -->
+    <section class="py-20 bg-cream">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              ¿Te Preocupa...?
+            </h2>
+          </div>
+
+          <!-- Inquietudes Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <!-- Inquietud 1 -->
+            <div class="glass rounded-card p-6 hover-lift">
+              <div class="text-4xl mb-3">😰</div>
+              <p class="text-slate-dark font-medium leading-relaxed">
+                "Mi hijo/a pasa horas con ChatGPT, ¿es seguro?"
+              </p>
+            </div>
+
+            <!-- Inquietud 2 -->
+            <div class="glass rounded-card p-6 hover-lift">
+              <div class="text-4xl mb-3">😰</div>
+              <p class="text-slate-dark font-medium leading-relaxed">
+                "No entiendo esta tecnología, ¿cómo puedo orientarle?"
+              </p>
+            </div>
+
+            <!-- Inquietud 3 -->
+            <div class="glass rounded-card p-6 hover-lift">
+              <div class="text-4xl mb-3">😰</div>
+              <p class="text-slate-dark font-medium leading-relaxed">
+                "¿Está usando IA para hacer trampa en los deberes?"
+              </p>
+            </div>
+
+            <!-- Inquietud 4 -->
+            <div class="glass rounded-card p-6 hover-lift">
+              <div class="text-4xl mb-3">😰</div>
+              <p class="text-slate-dark font-medium leading-relaxed">
+                "Me siento desconectado/a de su mundo digital y eso me angustia"
+              </p>
+            </div>
+
+            <!-- Inquietud 5 -->
+            <div class="glass rounded-card p-6 hover-lift">
+              <div class="text-4xl mb-3">😰</div>
+              <p class="text-slate-dark font-medium leading-relaxed">
+                "¿Cómo saber si está usando la IA de forma ética y responsable?"
+              </p>
+            </div>
+
+            <!-- Inquietud 6 -->
+            <div class="glass rounded-card p-6 hover-lift">
+              <div class="text-4xl mb-3">😰</div>
+              <p class="text-slate-dark font-medium leading-relaxed">
+                "No quiero ser el 'padre/madre policía', pero tampoco dejarlo solo"
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Transición empática -->
+          <div class="max-w-3xl mx-auto text-center">
+            <div class="glass rounded-card p-8 border-l-4 border-sky-soft-400">
+              <p class="text-lg text-slate-dark leading-relaxed">
+                <span class="font-semibold text-sky-soft-600">Estas preocupaciones son completamente normales.</span><br>
+                La buena noticia: no necesitas ser experto en tecnología para ser un buen guía para tus hijos.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         LA SOLUCIÓN
+         ============================================ -->
+    <section id="solucion" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              De la Preocupación a la <span class="gradient-text">Colaboración</span>
+            </h2>
+            <p class="text-xl text-slate-dark/70 max-w-2xl mx-auto">
+              En Ialogía, te ayudamos a:
+            </p>
+          </div>
+
+          <!-- Pilares Grid -->
+          <div class="space-y-6">
+
+            <!-- Pilar 1 -->
+            <div class="glass rounded-card p-6 border-l-4 border-sky-soft-400 hover-lift">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-sky-soft-100 rounded-full flex items-center justify-center text-sky-soft-600 font-bold text-xl">
+                  ✅
+                </div>
+                <div>
+                  <h3 class="text-xl font-display font-bold text-slate-dark mb-2">
+                    ENTENDER sin sentirte abrumado
+                  </h3>
+                  <p class="text-slate-dark/80 leading-relaxed">
+                    Explicaciones simples, sin jerga técnica. Aprende qué es la IA y cómo la usan tus hijos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pilar 2 -->
+            <div class="glass rounded-card p-6 border-l-4 border-sky-soft-400 hover-lift">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-sky-soft-100 rounded-full flex items-center justify-center text-sky-soft-600 font-bold text-xl">
+                  ✅
+                </div>
+                <div>
+                  <h3 class="text-xl font-display font-bold text-slate-dark mb-2">
+                    CONVERSAR con confianza
+                  </h3>
+                  <p class="text-slate-dark/80 leading-relaxed">
+                    Herramientas para mantener diálogos fluidos y constructivos sobre tecnología, sin conflictos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pilar 3 -->
+            <div class="glass rounded-card p-6 border-l-4 border-sky-soft-400 hover-lift">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-sky-soft-100 rounded-full flex items-center justify-center text-sky-soft-600 font-bold text-xl">
+                  ✅
+                </div>
+                <div>
+                  <h3 class="text-xl font-display font-bold text-slate-dark mb-2">
+                    SUPERVISAR con respeto
+                  </h3>
+                  <p class="text-slate-dark/80 leading-relaxed">
+                    Estrategias de acompañamiento que no invaden su privacidad pero sí garantizan su seguridad.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pilar 4 -->
+            <div class="glass rounded-card p-6 border-l-4 border-sky-soft-400 hover-lift">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-sky-soft-100 rounded-full flex items-center justify-center text-sky-soft-600 font-bold text-xl">
+                  ✅
+                </div>
+                <div>
+                  <h3 class="text-xl font-display font-bold text-slate-dark mb-2">
+                    ESTABLECER límites saludables
+                  </h3>
+                  <p class="text-slate-dark/80 leading-relaxed">
+                    Cómo acordar reglas de uso de IA basadas en valores familiares, no en imposiciones.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pilar 5 -->
+            <div class="glass rounded-card p-6 border-l-4 border-sky-soft-400 hover-lift">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-8 h-8 bg-sky-soft-100 rounded-full flex items-center justify-center text-sky-soft-600 font-bold text-xl">
+                  ✅
+                </div>
+                <div>
+                  <h3 class="text-xl font-display font-bold text-slate-dark mb-2">
+                    CONVERTIR la IA en un puente
+                  </h3>
+                  <p class="text-slate-dark/80 leading-relaxed">
+                    Proyectos en familia, aprendizaje conjunto y momentos de calidad alrededor de la tecnología.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         PROGRAMA PARA PADRES
+         ============================================ -->
+    <section id="programa" class="py-20 bg-cream">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              Taller de Acompañamiento Digital para Familias
+            </h2>
+            <p class="text-xl text-slate-dark/70 max-w-2xl mx-auto">
+              10 horas de formación práctica distribuidas en 5 sesiones de 2 horas
+            </p>
+          </div>
+
+          <!-- Módulos -->
+          <div class="space-y-6">
+
+            <!-- Módulo 1 -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <div>
+                  <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-2">
+                    Módulo 1: IA para Padres (Sin Tecnicismos)
+                  </h3>
+                  <p class="text-sm text-slate-dark/60 font-medium">Duración: 2 horas</p>
+                </div>
+              </div>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Qué es ChatGPT, DALL-E y otras herramientas que usan tus hijos</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Cómo funciona la IA (explicación ultra-simple)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Probamos las herramientas juntos (tú también las usas)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Desmontamos mitos y miedos</span>
+                </li>
+              </ul>
+              <div class="pt-4 border-t border-sky-soft-200">
+                <p class="text-sm font-semibold text-sky-soft-700">
+                  📝 ACTIVIDAD: Tu primera conversación con una IA
+                </p>
+              </div>
+            </div>
+
+            <!-- Módulo 2 -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <div>
+                  <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-2">
+                    Módulo 2: Seguridad y Privacidad
+                  </h3>
+                  <p class="text-sm text-slate-dark/60 font-medium">Duración: 2 horas</p>
+                </div>
+              </div>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Qué datos comparten nuestros hijos (y por qué importa)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Configuración de controles parentales (sin espiar)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Señales de uso problemático o dependencia</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Cómo hablar de privacidad sin alarmar</span>
+                </li>
+              </ul>
+              <div class="pt-4 border-t border-sky-soft-200">
+                <p class="text-sm font-semibold text-sky-soft-700">
+                  📦 ENTREGABLE: Checklist de Seguridad Digital
+                </p>
+              </div>
+            </div>
+
+            <!-- Módulo 3 -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <div>
+                  <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-2">
+                    Módulo 3: Ética y Valores
+                  </h3>
+                  <p class="text-sm text-slate-dark/60 font-medium">Duración: 2 horas</p>
+                </div>
+              </div>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Plagio vs. asistencia: ¿dónde está la línea?</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Fomentar el pensamiento crítico en casa</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Conversaciones sobre veracidad, sesgo y manipulación</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Cómo enseñar a verificar información</span>
+                </li>
+              </ul>
+              <div class="pt-4 border-t border-sky-soft-200">
+                <p class="text-sm font-semibold text-sky-soft-700">
+                  📝 ACTIVIDAD: Role-playing de conversaciones difíciles
+                </p>
+              </div>
+            </div>
+
+            <!-- Módulo 4 -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <div>
+                  <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-2">
+                    Módulo 4: Apoyo en el Aprendizaje
+                  </h3>
+                  <p class="text-sm text-slate-dark/60 font-medium">Duración: 2 horas</p>
+                </div>
+              </div>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Cómo ayudar con los deberes (sin hacerlos tú)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Usar IA para reforzar conceptos que no entienden</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Herramientas de estudio en familia (NotebookLM, Quizlet + IA)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Proyectos colaborativos padres-hijos</span>
+                </li>
+              </ul>
+              <div class="pt-4 border-t border-sky-soft-200">
+                <p class="text-sm font-semibold text-sky-soft-700">
+                  📦 ENTREGABLE: Kit de Herramientas de Estudio Familiar
+                </p>
+              </div>
+            </div>
+
+            <!-- Sesión Final -->
+            <div class="glass rounded-card p-8 hover-lift border-2 border-sky-soft-400">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                <div>
+                  <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-2">
+                    Sesión Final: Plan Familiar de Uso de IA
+                  </h3>
+                  <p class="text-sm text-slate-dark/60 font-medium">Duración: 2 horas</p>
+                </div>
+              </div>
+              <ul class="space-y-2 mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Creamos juntos un "Contrato Familiar de Uso de IA"</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Establecemos reglas, horarios y valores</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Compromisos para todos (padres e hijos)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500 mt-1">•</span>
+                  <span class="text-slate-dark">Cómo revisar y ajustar el plan cada trimestre</span>
+                </li>
+              </ul>
+              <div class="pt-4 border-t border-sky-soft-200">
+                <p class="text-sm font-semibold text-sky-soft-700">
+                  📦 ENTREGABLE: Tu Contrato Familiar personalizado
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Incluye -->
+          <div class="mt-12 glass rounded-card p-8">
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div class="text-4xl mb-2">📹</div>
+                <p class="font-semibold text-slate-dark">Online en vivo + grabaciones</p>
+              </div>
+              <div>
+                <div class="text-4xl mb-2">📚</div>
+                <p class="font-semibold text-slate-dark">Materiales descargables</p>
+              </div>
+              <div>
+                <div class="text-4xl mb-2">👥</div>
+                <p class="font-semibold text-slate-dark">Comunidad + soporte 1 mes</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         KIT DE HERRAMIENTAS
+         ============================================ -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              Tu Kit de Acompañamiento Digital
+            </h2>
+          </div>
+
+          <!-- Categorías -->
+          <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- CATEGORÍA 1: Control Parental Respetuoso -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="text-5xl mb-4">🛡️</div>
+              <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-6">
+                Control Parental Respetuoso
+              </h3>
+
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">⚙️</span> Configuración de Dispositivos
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Cómo establecer límites de tiempo de pantalla</li>
+                    <li>→ Filtros de contenido apropiados por edad</li>
+                    <li>→ Supervisión sin invadir privacidad</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">⚖️</span> Balance Supervisión-Confianza
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Estrategias para supervisar sin espiar</li>
+                    <li>→ Cuándo revisar y cuándo confiar</li>
+                    <li>→ Señales de que necesitas intervenir</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">📱</span> Apps y Herramientas Recomendadas
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Controles parentales nativos (iOS/Android)</li>
+                    <li>→ Apps de gestión de tiempo de pantalla</li>
+                    <li>→ Herramientas de filtrado web</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- CATEGORÍA 2: Conversaciones Efectivas -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="text-5xl mb-4">💬</div>
+              <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-6">
+                Conversaciones Efectivas
+              </h3>
+
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">❓</span> Preguntas para Abrir Diálogo
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ "¿Qué te ayudó ChatGPT a entender hoy?"</li>
+                    <li>→ "¿Cómo sabes si la respuesta de la IA es correcta?"</li>
+                    <li>→ "¿Qué te parece más útil de estas herramientas?"</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">👂</span> Escucha Activa
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Técnicas para no juzgar</li>
+                    <li>→ Cómo responder a sus descubrimientos</li>
+                    <li>→ Validar su experiencia</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">🚫</span> Evitar la Confrontación
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Frases que funcionan vs. frases que alejan</li>
+                    <li>→ Cómo establecer límites sin generar rebeldía</li>
+                    <li>→ Negociación colaborativa de reglas</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- CATEGORÍA 3: Recursos Educativos -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="text-5xl mb-4">📚</div>
+              <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-6">
+                Recursos Educativos
+              </h3>
+
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">📄</span> Guías Descargables
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ "Glosario de IA para Padres"</li>
+                    <li>→ "Checklist de Seguridad Digital por Edades"</li>
+                    <li>→ "Plantilla de Contrato Familiar"</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">🎥</span> Videos Explicativos
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ "IA en 5 minutos para padres"</li>
+                    <li>→ "Cómo hablar de ética con adolescentes"</li>
+                    <li>→ "Señales de uso problemático"</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">👥</span> Comunidad de Padres
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Grupo privado de WhatsApp/Discord</li>
+                    <li>→ Webinars mensuales con expertos</li>
+                    <li>→ Intercambio de experiencias y dudas</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- CATEGORÍA 4: Señales de Alerta -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="text-5xl mb-4">⚠️</div>
+              <h3 class="text-2xl font-display font-bold text-sky-soft-600 mb-6">
+                Señales de Alerta
+              </h3>
+
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">🔴</span> Dependencia Excesiva
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Uso compulsivo (más de 4h diarias en IA)</li>
+                    <li>→ Ansiedad cuando no tienen acceso</li>
+                    <li>→ Pérdida de interés en otras actividades</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">🚪</span> Aislamiento Social
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Prefiere conversar con IA que con personas</li>
+                    <li>→ Disminución de interacciones cara a cara</li>
+                    <li>→ Evita actividades grupales</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-slate-dark mb-2 flex items-center gap-2">
+                    <span class="text-xl">🆘</span> Cuándo Pedir Ayuda Profesional
+                  </h4>
+                  <ul class="ml-8 space-y-1 text-sm text-slate-dark/80">
+                    <li>→ Cambios drásticos en comportamiento</li>
+                    <li>→ Rendimiento escolar en caída</li>
+                    <li>→ Signos de depresión o ansiedad</li>
+                    <li>→ Recursos de apoyo psicológico</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         TESTIMONIOS PADRES
+         ============================================ -->
+    <section class="py-20 bg-cream">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              Lo Que Dicen Otras Familias
+            </h2>
+          </div>
+
+          <!-- Testimonios Grid -->
+          <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Testimonio 1 -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="mb-6">
+                <div class="w-16 h-16 bg-gradient-sky rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                  AM
+                </div>
+                <p class="text-slate-dark/80 leading-relaxed mb-4 italic">
+                  "Antes, cuando mi hija de 14 años mencionaba ChatGPT, me sentía completamente perdida.
+                  Ahora, después del taller, puedo tener conversaciones reales con ella sobre cómo lo usa para estudiar.
+                  ¡Incluso le doy ideas de prompts!"
+                </p>
+              </div>
+              <div class="border-t border-sky-soft-200 pt-4">
+                <p class="font-semibold text-slate-dark">Ana Martínez</p>
+                <p class="text-sm text-slate-dark/60">Madre de alumna de 2º ESO</p>
+                <p class="text-sm text-sky-soft-600 flex items-center gap-1 mt-1">
+                  <span>📍</span> Madrid
+                </p>
+              </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="mb-6">
+                <div class="w-16 h-16 bg-gradient-sky rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                  JP
+                </div>
+                <p class="text-slate-dark/80 leading-relaxed mb-4 italic">
+                  "El taller me ayudó a dejar de ver la IA como una amenaza y empezar a verla como una herramienta.
+                  Ahora la usamos juntos para proyectos del cole y es un momento de calidad que antes no teníamos."
+                </p>
+              </div>
+              <div class="border-t border-sky-soft-200 pt-4">
+                <p class="font-semibold text-slate-dark">Javier Pérez</p>
+                <p class="text-sm text-slate-dark/60">Padre de alumno de 6º Primaria</p>
+                <p class="text-sm text-sky-soft-600 flex items-center gap-1 mt-1">
+                  <span>📍</span> Valencia
+                </p>
+              </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="mb-6">
+                <div class="w-16 h-16 bg-gradient-sky rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                  CL
+                </div>
+                <p class="text-slate-dark/80 leading-relaxed mb-4 italic">
+                  "Me preocupaba que mi hijo estuviera haciendo trampa con la IA.
+                  El taller me enseñó a diferenciar entre usar IA como ayuda o como atajo.
+                  Ahora tenemos un 'contrato familiar' que él mismo ayudó a crear. Funciona increíble."
+                </p>
+              </div>
+              <div class="border-t border-sky-soft-200 pt-4">
+                <p class="font-semibold text-slate-dark">Carmen López</p>
+                <p class="text-sm text-slate-dark/60">Madre de alumno de 1º Bachillerato</p>
+                <p class="text-sm text-sky-soft-600 flex items-center gap-1 mt-1">
+                  <span>📍</span> Sevilla
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         LA BRECHA GENERACIONAL
+         ============================================ -->
+    <section class="py-20 bg-gradient-to-br from-sky-soft-50 to-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- Texto -->
+            <div>
+              <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-6">
+                Cerrando la Brecha Tecnológica
+              </h2>
+
+              <div class="space-y-4 text-lg text-slate-dark/80 leading-relaxed mb-8">
+                <p>
+                  El problema no es que tus hijos sepan más de tecnología que tú.
+                </p>
+                <p class="font-semibold text-sky-soft-600">
+                  El problema es no poder acompañarlos en ese viaje.
+                </p>
+                <p>
+                  Ellos no necesitan que seas un experto.
+                  Necesitan que seas un guía empático que:
+                </p>
+              </div>
+
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-3">
+                  <span class="text-sky-soft-500 font-bold text-xl">•</span>
+                  <span class="text-slate-dark">Los escuche sin juzgar</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-sky-soft-500 font-bold text-xl">•</span>
+                  <span class="text-slate-dark">Los oriente con valores claros</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-sky-soft-500 font-bold text-xl">•</span>
+                  <span class="text-slate-dark">Los proteja sin sobreproteger</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-sky-soft-500 font-bold text-xl">•</span>
+                  <span class="text-slate-dark">Los acompañe en lugar de controlar</span>
+                </li>
+              </ul>
+
+              <div class="glass rounded-card p-6 border-l-4 border-sky-soft-400">
+                <p class="text-slate-dark leading-relaxed">
+                  En Ialogía, te damos el mapa para navegar juntos en este territorio digital.
+                  <span class="font-semibold">No para que te conviertas en un experto en IA,
+                  sino para que te conviertas en el mejor guía que tus hijos pueden tener.</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Ilustración Placeholder -->
+            <div class="glass rounded-card p-8 flex items-center justify-center min-h-[400px]">
+              <div class="text-center">
+                <div class="text-8xl mb-4 animate-float">👨‍👩‍👧‍👦</div>
+                <p class="text-slate-dark/60 italic">Padre/madre e hijo colaborando con tecnología,<br>puente en lugar de muro</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         CONTRATO FAMILIAR
+         ============================================ -->
+    <section id="contrato" class="py-20 bg-cream">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              Ejemplo: Contrato Familiar de Uso de IA
+            </h2>
+            <p class="text-lg text-slate-dark/70">
+              Plantilla editable para personalizar con tu familia
+            </p>
+          </div>
+
+          <!-- Contrato -->
+          <div class="paper-style rounded-card p-10 border-2 border-slate-300">
+
+            <div class="text-center mb-8">
+              <h3 class="text-2xl font-bold text-slate-dark mb-2">
+                CONTRATO FAMILIAR DE USO DE IA
+              </h3>
+              <div class="w-32 h-1 bg-sky-soft-400 mx-auto"></div>
+            </div>
+
+            <div class="space-y-6 text-slate-dark">
+
+              <p class="text-lg font-semibold text-center">
+                NOSOTROS, LA FAMILIA <span class="border-b-2 border-slate-400 inline-block min-w-[200px] text-center">_____________________</span>, NOS COMPROMETEMOS A:
+              </p>
+
+              <!-- Compromisos -->
+              <div class="space-y-4">
+
+                <div>
+                  <p class="font-bold mb-1">1. APRENDIZAJE HONESTO</p>
+                  <p class="ml-4 text-sm">
+                    Usaremos la IA como herramienta de aprendizaje, no como atajo para evitar pensar o hacer nuestro trabajo.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold mb-1">2. VERIFICACIÓN CRÍTICA</p>
+                  <p class="ml-4 text-sm">
+                    Siempre verificaremos la información que genera la IA con al menos una fuente confiable.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold mb-1">3. ATRIBUCIÓN Y HONESTIDAD</p>
+                  <p class="ml-4 text-sm">
+                    Daremos crédito cuando usemos contenido generado por IA y seremos honestos sobre su uso en trabajos escolares.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold mb-1">4. HORARIOS SALUDABLES</p>
+                  <p class="ml-4 text-sm mb-2">
+                    Respetaremos los siguientes horarios de uso:
+                  </p>
+                  <ul class="ml-8 text-sm space-y-1">
+                    <li>• Días de semana: <span class="border-b border-slate-400 inline-block min-w-[100px]">_____</span> a <span class="border-b border-slate-400 inline-block min-w-[100px]">_____</span></li>
+                    <li>• Fines de semana: <span class="border-b border-slate-400 inline-block min-w-[100px]">_____</span> a <span class="border-b border-slate-400 inline-block min-w-[100px]">_____</span></li>
+                    <li>• Máximo <span class="border-b border-slate-400 inline-block min-w-[50px]">___</span> horas diarias</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p class="font-bold mb-1">5. CONVERSACIÓN ABIERTA</p>
+                  <p class="ml-4 text-sm">
+                    Compartiremos en familia qué descubrimos con IA, qué aprendemos y qué dudas tenemos.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold mb-1">6. PRIVACIDAD Y SEGURIDAD</p>
+                  <p class="ml-4 text-sm">
+                    No compartiremos información personal sensible con herramientas de IA.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold mb-1">7. USO ÉTICO</p>
+                  <p class="ml-4 text-sm">
+                    No usaremos IA para crear contenido dañino, engañoso o que vulnere a otros.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold mb-1">8. REVISIÓN TRIMESTRAL</p>
+                  <p class="ml-4 text-sm">
+                    Revisaremos este contrato cada 3 meses y lo ajustaremos según vayamos aprendiendo.
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Consecuencias -->
+              <div class="mt-8 pt-6 border-t border-slate-300">
+                <p class="font-bold mb-2">CONSECUENCIAS ACORDADAS (si no se cumple):</p>
+                <div class="border-b-2 border-slate-400 min-h-[60px]"></div>
+              </div>
+
+              <!-- Firmas -->
+              <div class="mt-8 pt-6 border-t border-slate-300">
+                <p class="font-bold mb-4">FIRMADO:</p>
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between">
+                    <span>Padres/Tutores:</span>
+                    <span class="border-b-2 border-slate-400 inline-block min-w-[250px]">___________________</span>
+                    <span class="text-sm">Fecha: <span class="border-b border-slate-400 inline-block min-w-[100px]">______</span></span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span>Hijo/a:</span>
+                    <span class="border-b-2 border-slate-400 inline-block min-w-[250px]">___________________________</span>
+                    <span class="text-sm">Fecha: <span class="border-b border-slate-400 inline-block min-w-[100px]">______</span></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Botón descarga -->
+          <div class="text-center mt-8">
+            <button class="px-8 py-4 bg-sky-soft-500 text-white font-semibold rounded-button hover:bg-sky-soft-600 hover:scale-105 transition-all duration-300 shadow-card">
+              📥 Descargar Plantilla Editable
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         FORMATOS Y ACCESO PADRES
+         ============================================ -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              Opciones para Familias
+            </h2>
+          </div>
+
+          <!-- Pricing Cards -->
+          <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+            <!-- Taller Individual -->
+            <div class="glass rounded-card p-8 hover-lift border-2 border-sky-soft-200">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-display font-bold text-slate-dark mb-2">
+                  Taller Individual
+                </h3>
+                <p class="text-sm text-slate-dark/60">Ideal para: Flexibilidad total</p>
+              </div>
+
+              <div class="text-center mb-6">
+                <div class="text-4xl font-display font-bold text-sky-soft-600 mb-1">
+                  120€
+                </div>
+                <p class="text-sm text-slate-dark/60">por familia</p>
+              </div>
+
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">⏱️</span>
+                  <span class="text-sm text-slate-dark">10 horas (5 sesiones)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">📍</span>
+                  <span class="text-sm text-slate-dark">Online en vivo</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">📅</span>
+                  <span class="text-sm text-slate-dark">Horario a elegir</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">📚</span>
+                  <span class="text-sm text-slate-dark">Material descargable</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">👥</span>
+                  <span class="text-sm text-slate-dark">Comunidad + soporte 1 mes</span>
+                </li>
+              </ul>
+
+              <button class="w-full px-6 py-3 bg-sky-soft-500 text-white font-semibold rounded-button hover:bg-sky-soft-600 transition-colors">
+                Inscribirse
+              </button>
+            </div>
+
+            <!-- Taller Grupal - DESTACADO -->
+            <div class="glass rounded-card p-8 hover-lift border-4 border-sky-soft-500 relative transform md:scale-105 shadow-lift">
+              <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span class="bg-sky-soft-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                  ⭐ MÁS POPULAR
+                </span>
+              </div>
+
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-display font-bold text-slate-dark mb-2">
+                  Taller Grupal
+                </h3>
+                <p class="text-sm text-slate-dark/60">Ideal para: Networking entre familias</p>
+              </div>
+
+              <div class="text-center mb-6">
+                <div class="text-4xl font-display font-bold text-sky-soft-600 mb-1">
+                  90€
+                </div>
+                <p class="text-sm text-slate-dark/60">por familia</p>
+              </div>
+
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">⏱️</span>
+                  <span class="text-sm text-slate-dark">1 día completo (sábado)</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">📍</span>
+                  <span class="text-sm text-slate-dark">Presencial</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">🕐</span>
+                  <span class="text-sm text-slate-dark">9:00 - 18:00</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">☕</span>
+                  <span class="text-sm text-slate-dark">Coffee break y comida</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">📚</span>
+                  <span class="text-sm text-slate-dark">Material físico + digital</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">👥</span>
+                  <span class="text-sm text-slate-dark">Máx. 15 familias</span>
+                </li>
+              </ul>
+
+              <button class="w-full px-6 py-3 bg-sky-soft-600 text-white font-semibold rounded-button hover:bg-sky-soft-700 transition-colors">
+                Ver Próximas Fechas
+              </button>
+            </div>
+
+            <!-- Comunidad -->
+            <div class="glass rounded-card p-8 hover-lift border-2 border-sky-soft-200">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-display font-bold text-slate-dark mb-2">
+                  Comunidad Ialogía
+                </h3>
+                <p class="text-sm text-slate-dark/60">Ideal para: Soporte continuo</p>
+              </div>
+
+              <div class="text-center mb-6">
+                <div class="text-4xl font-display font-bold text-sky-soft-600 mb-1">
+                  25€<span class="text-xl text-slate-dark/60">/mes</span>
+                </div>
+                <p class="text-sm text-slate-dark/60">cancela cuando quieras</p>
+              </div>
+
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">⏱️</span>
+                  <span class="text-sm text-slate-dark">Suscripción mensual</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">📍</span>
+                  <span class="text-sm text-slate-dark">100% Online</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">📚</span>
+                  <span class="text-sm text-slate-dark">Recursos actualizados</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">🎥</span>
+                  <span class="text-sm text-slate-dark">Webinars mensuales</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">💬</span>
+                  <span class="text-sm text-slate-dark">Grupo privado WhatsApp/Discord</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">📰</span>
+                  <span class="text-sm text-slate-dark">Newsletter semanal</span>
+                </li>
+              </ul>
+
+              <button class="w-full px-6 py-3 bg-sky-soft-500 text-white font-semibold rounded-button hover:bg-sky-soft-600 transition-colors">
+                Probar 1 Mes Gratis
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Descuentos y Garantía -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass rounded-card p-6">
+              <h4 class="font-bold text-slate-dark mb-3 flex items-center gap-2">
+                <span class="text-2xl">🎁</span> Descuentos
+              </h4>
+              <ul class="space-y-2 text-sm text-slate-dark/80">
+                <li>• 2x1 en Taller Individual si invitas a otra familia</li>
+                <li>• 20% dto. para antiguos alumnos de Ialogía</li>
+                <li>• Bonos familiares (consultar)</li>
+              </ul>
+            </div>
+
+            <div class="glass rounded-card p-6 border-2 border-sky-soft-400">
+              <h4 class="font-bold text-slate-dark mb-3 flex items-center gap-2">
+                <span class="text-2xl">✅</span> Garantía
+              </h4>
+              <p class="text-sm text-slate-dark/80">
+                Si no te sirve, devolvemos tu dinero. Sin preguntas.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         RECURSOS GRATUITOS
+         ============================================ -->
+    <section class="py-20 bg-cream">
+      <div class="container mx-auto px-6">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              Para Empezar Hoy Mismo <span class="text-sky-soft-500">(Gratis)</span>
+            </h2>
+          </div>
+
+          <!-- Recursos Grid -->
+          <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Guías Descargables -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="text-5xl mb-4">📥</div>
+              <h3 class="text-2xl font-display font-bold text-slate-dark mb-6">
+                Guías Descargables
+              </h3>
+
+              <div class="space-y-4">
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark mb-1">
+                    "Guía de Conversaciones sobre IA con tus Hijos"
+                  </h4>
+                  <ul class="text-sm text-slate-dark/70 space-y-1">
+                    <li>→ 20 preguntas para abrir diálogo</li>
+                    <li>→ Frases que funcionan vs. frases que alejan</li>
+                    <li>→ Actividades en familia con IA</li>
+                  </ul>
+                  <button class="mt-2 text-sm text-sky-soft-600 font-semibold hover:underline">
+                    Descargar PDF
+                  </button>
+                </div>
+
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark mb-1">
+                    "Checklist de Seguridad Digital por Edades"
+                  </h4>
+                  <ul class="text-sm text-slate-dark/70 space-y-1">
+                    <li>→ 10-12 años: Qué supervisar</li>
+                    <li>→ 13-15 años: Equilibrio supervisión-autonomía</li>
+                    <li>→ 16-18 años: Acompañamiento respetuoso</li>
+                  </ul>
+                  <button class="mt-2 text-sm text-sky-soft-600 font-semibold hover:underline">
+                    Descargar PDF
+                  </button>
+                </div>
+
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark mb-1">
+                    "Plantilla de Contrato Familiar"
+                  </h4>
+                  <ul class="text-sm text-slate-dark/70 space-y-1">
+                    <li>→ Versión editable para personalizar</li>
+                    <li>→ Ejemplos de reglas por edad</li>
+                    <li>→ Cómo negociar con adolescentes</li>
+                  </ul>
+                  <button class="mt-2 text-sm text-sky-soft-600 font-semibold hover:underline">
+                    Descargar DOCX
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Videos Educativos -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="text-5xl mb-4">🎥</div>
+              <h3 class="text-2xl font-display font-bold text-slate-dark mb-6">
+                Videos Educativos
+              </h3>
+
+              <div class="space-y-4">
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark mb-1">
+                    "IA Explicada para Padres en 5 Minutos"
+                  </h4>
+                  <p class="text-sm text-slate-dark/70">
+                    Qué es, cómo funciona, por qué importa
+                  </p>
+                  <button class="mt-2 text-sm text-sky-soft-600 font-semibold hover:underline">
+                    Ver Video
+                  </button>
+                </div>
+
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark mb-1">
+                    "Cómo Detectar Si Tu Hijo Usa IA para Hacer Trampa"
+                  </h4>
+                  <p class="text-sm text-slate-dark/70">
+                    Señales, conversaciones, soluciones
+                  </p>
+                  <button class="mt-2 text-sm text-sky-soft-600 font-semibold hover:underline">
+                    Ver Video
+                  </button>
+                </div>
+
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark mb-1">
+                    "Configurar Controles Parentales en 10 Minutos"
+                  </h4>
+                  <p class="text-sm text-slate-dark/70">
+                    iOS, Android, Windows
+                  </p>
+                  <button class="mt-2 text-sm text-sky-soft-600 font-semibold hover:underline">
+                    Ver Tutorial
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Podcast -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="text-5xl mb-4">🎧</div>
+              <h3 class="text-2xl font-display font-bold text-slate-dark mb-6">
+                Podcast Ialogía Familias
+              </h3>
+
+              <div class="space-y-3">
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark">
+                    Episodio 1: "Cómo Hablar de Ética con Adolescentes"
+                  </h4>
+                </div>
+
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark">
+                    Episodio 2: "Mi Hijo es Adicto a ChatGPT: Qué Hacer"
+                  </h4>
+                </div>
+
+                <div class="border-l-4 border-sky-soft-400 pl-4">
+                  <h4 class="font-semibold text-slate-dark">
+                    Episodio 3: "IA y Deberes: Encontrando el Balance"
+                  </h4>
+                </div>
+
+                <button class="mt-4 px-6 py-3 bg-sky-soft-500 text-white font-semibold rounded-button hover:bg-sky-soft-600 transition-colors w-full">
+                  Escuchar en Spotify
+                </button>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="glass rounded-card p-8 hover-lift">
+              <div class="text-5xl mb-4">📰</div>
+              <h3 class="text-2xl font-display font-bold text-slate-dark mb-6">
+                Newsletter Semanal
+              </h3>
+
+              <p class="text-slate-dark/80 mb-4">
+                Suscríbete y recibe cada semana:
+              </p>
+
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">•</span>
+                  <span class="text-sm text-slate-dark">Noticias de IA que afectan a las familias</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">•</span>
+                  <span class="text-sm text-slate-dark">Tips prácticos de acompañamiento</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">•</span>
+                  <span class="text-sm text-slate-dark">Recursos gratuitos nuevos</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-sky-soft-500">•</span>
+                  <span class="text-sm text-slate-dark">Casos reales y soluciones</span>
+                </li>
+              </ul>
+
+              <form class="space-y-3">
+                <input
+                  type="email"
+                  placeholder="tu@email.com"
+                  class="w-full px-4 py-3 rounded-button border border-sky-soft-300 focus:outline-none focus:border-sky-soft-500"
+                >
+                <button class="w-full px-6 py-3 bg-sky-soft-500 text-white font-semibold rounded-button hover:bg-sky-soft-600 transition-colors">
+                  Suscribirme Gratis
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         FAQ PADRES
+         ============================================ -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-slate-dark mb-4">
+              Preguntas Frecuentes
+            </h2>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div class="space-y-4">
+
+            <!-- FAQ 1 -->
+            <div class="glass rounded-card overflow-hidden">
+              <button class="faq-question w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sky-soft-50 transition-colors" onclick="toggleFAQ(this)">
+                <span class="font-semibold text-slate-dark pr-4">
+                  ❓ ¿Necesito saber de tecnología?
+                </span>
+                <svg class="faq-icon w-6 h-6 text-sky-soft-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-6 pb-5">
+                <p class="text-slate-dark/80 leading-relaxed">
+                  No. El taller está diseñado completamente sin tecnicismos. Si sabes usar WhatsApp, es más que suficiente.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="glass rounded-card overflow-hidden">
+              <button class="faq-question w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sky-soft-50 transition-colors" onclick="toggleFAQ(this)">
+                <span class="font-semibold text-slate-dark pr-4">
+                  ❓ ¿Mis hijos deben asistir conmigo al taller?
+                </span>
+                <svg class="faq-icon w-6 h-6 text-sky-soft-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-6 pb-5">
+                <p class="text-slate-dark/80 leading-relaxed">
+                  No es obligatorio, pero pueden. Hay sesiones solo para padres y otras donde pueden participar juntos (opcional).
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="glass rounded-card overflow-hidden">
+              <button class="faq-question w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sky-soft-50 transition-colors" onclick="toggleFAQ(this)">
+                <span class="font-semibold text-slate-dark pr-4">
+                  ❓ ¿Qué edades de hijos abarca?
+                </span>
+                <svg class="faq-icon w-6 h-6 text-sky-soft-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-6 pb-5">
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Desde 10 años (cuando empiezan a usar IA) hasta 18 años. Adaptamos contenidos y estrategias según la edad.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="glass rounded-card overflow-hidden">
+              <button class="faq-question w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sky-soft-50 transition-colors" onclick="toggleFAQ(this)">
+                <span class="font-semibold text-slate-dark pr-4">
+                  ❓ ¿Y si mi hijo/a ya es un "experto" en IA?
+                </span>
+                <svg class="faq-icon w-6 h-6 text-sky-soft-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-6 pb-5">
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Perfecto. El objetivo no es que sepas más que ellos, sino que puedas guiarles éticamente y acompañarles.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="glass rounded-card overflow-hidden">
+              <button class="faq-question w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sky-soft-50 transition-colors" onclick="toggleFAQ(this)">
+                <span class="font-semibold text-slate-dark pr-4">
+                  ❓ ¿Enseñan a "espiar" a nuestros hijos?
+                </span>
+                <svg class="faq-icon w-6 h-6 text-sky-soft-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-6 pb-5">
+                <p class="text-slate-dark/80 leading-relaxed">
+                  No. Enseñamos supervisión respetuosa, no invasiva. El objetivo es construir confianza, no controlarlos.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="glass rounded-card overflow-hidden">
+              <button class="faq-question w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sky-soft-50 transition-colors" onclick="toggleFAQ(this)">
+                <span class="font-semibold text-slate-dark pr-4">
+                  ❓ ¿Qué pasa si mi hijo se niega a seguir reglas?
+                </span>
+                <svg class="faq-icon w-6 h-6 text-sky-soft-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-6 pb-5">
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Dedicamos una sesión completa a negociación y establecimiento de límites colaborativos. Te damos estrategias probadas.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="glass rounded-card overflow-hidden">
+              <button class="faq-question w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sky-soft-50 transition-colors" onclick="toggleFAQ(this)">
+                <span class="font-semibold text-slate-dark pr-4">
+                  ❓ ¿Puedo hacer el taller con mi pareja?
+                </span>
+                <svg class="faq-icon w-6 h-6 text-sky-soft-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-6 pb-5">
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Sí, absolutamente. De hecho, es ideal que ambos padres/tutores participen para tener un enfoque unificado.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="glass rounded-card overflow-hidden">
+              <button class="faq-question w-full px-6 py-5 flex items-center justify-between text-left hover:bg-sky-soft-50 transition-colors" onclick="toggleFAQ(this)">
+                <span class="font-semibold text-slate-dark pr-4">
+                  ❓ ¿Hay seguimiento después del taller?
+                </span>
+                <svg class="faq-icon w-6 h-6 text-sky-soft-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer px-6 pb-5">
+                <p class="text-slate-dark/80 leading-relaxed">
+                  Sí. Incluye 1 mes de soporte vía email/comunidad. Puedes extenderlo con la suscripción mensual.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================
+         CTA FINAL
+         ============================================ -->
+    <section class="py-24 bg-gradient-sky relative overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 bg-mesh-gradient opacity-30"></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+
+          <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+            Acompaña a Tus Hijos en la Era Digital
+          </h2>
+
+          <p class="text-xl text-sky-soft-50 mb-4 max-w-2xl mx-auto leading-relaxed">
+            No necesitas ser experto en tecnología.<br>
+            Solo necesitas ser el guía empático que tus hijos necesitan.
+          </p>
+
+          <p class="text-lg text-sky-soft-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+            La brecha generacional no se cierra sola.<br>
+            Pero con las herramientas correctas, se convierte en un puente.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="#programa" class="px-8 py-4 bg-white text-sky-soft-600 font-semibold rounded-button hover:bg-sky-soft-50 hover:scale-105 transition-all duration-300 shadow-lift">
+              Inscribirme en el Taller
+            </a>
+            <a href="#" class="px-8 py-4 bg-white/20 backdrop-blur-md text-white font-semibold rounded-button hover:bg-white/30 hover:scale-105 transition-all duration-300 border border-white/40">
+              Descargar Recursos Gratis
+            </a>
+          </div>
+
+          <div class="mb-8">
+            <a href="#" class="text-sky-soft-50 hover:text-white transition-colors underline">
+              Agendar Llamada de 15 min (Gratis)
+            </a>
+          </div>
+
+          <!-- Contacto -->
+          <div class="mb-8">
+            <p class="text-sky-soft-100 mb-2">¿Tienes dudas? Escríbenos</p>
+            <a href="#" class="text-white font-semibold hover:underline">
+              Contactar
+            </a>
+          </div>
+
+          <!-- Garantía -->
+          <div class="glass rounded-card p-6 max-w-2xl mx-auto border-2 border-white/40">
+            <p class="font-semibold text-white mb-2">GARANTÍA:</p>
+            <p class="text-sky-soft-50">
+              Si después de la primera sesión decides que no es para ti,
+              te devolvemos el 100% de tu dinero. Sin preguntas.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JavaScript -->
+  <script src="js/components-loader.js"></script>
+  <script src="js/navigation.js"></script>
+
+  <!-- FAQ Accordion Script -->
+  <script>
+    function toggleFAQ(button) {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+
+      // Close all other FAQs
+      document.querySelectorAll('.faq-answer').forEach(item => {
+        if (item !== answer) {
+          item.classList.remove('active');
+        }
+      });
+      document.querySelectorAll('.faq-icon').forEach(item => {
+        if (item !== icon) {
+          item.classList.remove('active');
+        }
+      });
+
+      // Toggle current FAQ
+      answer.classList.toggle('active');
+      icon.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
